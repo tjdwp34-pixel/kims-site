@@ -60,10 +60,85 @@ export default function FestivalAgencySiteMockup() {
         "/portfolio-7-10.jpg",
         "/portfolio-7-11.jpg",
       ],
+    },
+    {
+      id: "child-traffic-safety-festival-1",
+      title: "제 1회 어린이 교통안전문화 축제",
+      tag: "Festival",
+      year: "2025",
+      location: "서울 중랑구",
+      image: "/portfolio-9.jpg",
+      desc: "어린이를 대상으로 한 교통안전 체험형 축제로, 교육 프로그램과 현장 운영을 통합 기획한 프로젝트",
+      detail: "제 1회 어린이 교통안전문화 축제는 어린이들이 교통안전을 쉽고 재미있게 체험할 수 있도록 구성된 참여형 행사로, 체험 부스 운영, 안전 교육 프로그램, 무대 진행, 현장 동선 관리까지 통합적으로 기획·운영된 프로젝트입니다.",
+      gallery: [
+        "/portfolio-9.jpg",
+        "/portfolio-9-2.jpg",
+        "/portfolio-9-3.jpg",
+        "/portfolio-9-4.jpg",
+        "/portfolio-9-5.jpg",
+        "/portfolio-9-6.jpg",
+        "/portfolio-9-7.jpg",
+        "/portfolio-9-8.jpg",
+        "/portfolio-9-9.jpg",
+        "/portfolio-9-10.jpg",
+        "/portfolio-9-11.jpg",
+        "/portfolio-9-12.jpg",
+        "/portfolio-9-13.jpg",
+      ],
+        },
+    {
+      id: "jurak-festival-series",
+      title: "제 2회, 제 3회 주락이 페스티벌",
+      tag: "Festival",
+      year: "2025",
+      location: "서울 성북구",
+      image: "/portfolio-10.jpg",
+      desc: "지역 참여형 축제로 다양한 체험 프로그램과 무대 운영을 통합 기획·운영한 프로젝트",
+      detail: "제 2회 및 제 3회 주락이 페스티벌은 지역 주민과 방문객이 함께 즐길 수 있도록 기획된 참여형 축제로, 체험 부스, 공연 프로그램, 현장 동선 설계, 운영 인력 배치, 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: [
+        "/portfolio-10.jpg",
+        "/portfolio-10-2.jpg",
+        "/portfolio-10-3.jpg",
+        "/portfolio-10-4.jpg",
+        "/portfolio-10-5.jpg",
+        "/portfolio-10-6.jpg",
+        "/portfolio-10-7.jpg",
+      ],
     }
   ]
 
   const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
+
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    project: "",
+    type: "",
+    message: "",
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const subject = encodeURIComponent(`[문의] ${form.project || "프로젝트 문의"}`)
+    const body = encodeURIComponent(
+      `담당자명: ${form.name}
+연락처: ${form.phone}
+이메일: ${form.email}
+문의유형: ${form.type}
+
+내용:
+${form.message}`
+    )
+
+    window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
+  }
 
   const selectedPortfolio = useMemo(
     () => portfolio.find((item) => item.id === selectedPortfolioId) ?? portfolio[0],
@@ -294,10 +369,7 @@ export default function FestivalAgencySiteMockup() {
             ))}
           </div>
 
-          <div className="mt-6 rounded-3xl bg-white/5 p-5 text-sm leading-7 text-zinc-300 ring-1 ring-white/10">
-            상세 사진은 public 폴더에 아래 파일명으로 넣으면 됩니다.
-            예: {selectedPortfolio?.gallery.join(", ")}
-          </div>
+          
         </div>
       </section>
 
@@ -328,34 +400,35 @@ export default function FestivalAgencySiteMockup() {
         <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의</h2>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의 메일 작성</h2>
             <p className="mt-5 text-base leading-8 text-zinc-600">
-              행사 기획, 축제 운영, 무대/음향/조명/영상 렌탈까지 필요한 내용을 남겨주시면 일정과 예산에 맞춰 제안드립니다.
+              필요한 내용을 작성하시면 이메일 작성창이 열리며, 확인 후 보내기를 눌러 문의를 전송할 수 있습니다.
             </p>
             <div className="mt-8 space-y-3 text-sm text-zinc-700">
               <p><span className="font-semibold">Tel.</span> 010-7604-0025</p>
               <p><span className="font-semibold">E-mail.</span> kimset11@naver.com</p>
               <p><span className="font-semibold">Fax.</span> 0504-376-0025</p>
-              
+              <p><span className="font-semibold">Kakao.</span> Kims-ent</p>
+
             </div>
           </div>
-          <form className="rounded-3xl border bg-zinc-50 p-6 shadow-sm">
+          <form onSubmit={handleSubmit} className="rounded-3xl border bg-zinc-50 p-6 shadow-sm">
             <div className="grid gap-4 md:grid-cols-2">
-              <input className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="담당자명" />
-              <input className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="연락처" />
-              <input className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="이메일" />
-              <input className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사명 / 프로젝트명" />
-              <select className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2">
+              <input name="name" value={form.name} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="담당자명" />
+              <input name="phone" value={form.phone} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="연락처" />
+              <input name="email" value={form.email} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="이메일" />
+              <input name="project" value={form.project} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사명 / 프로젝트명" />
+              <select name="type" value={form.type} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2">
                 <option>문의 유형 선택</option>
                 <option>행사 기획</option>
                 <option>축제 운영</option>
                 <option>렌탈 문의</option>
                 <option>영상 제작</option>
               </select>
-              <textarea className="min-h-[160px] rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사 일정, 장소, 예산, 필요한 서비스 등을 적어주세요" />
+              <textarea name="message" value={form.message} onChange={handleChange} className="min-h-[160px] rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사 일정, 장소, 예산, 필요한 서비스 등을 적어주세요" />
             </div>
-            <button type="button" className="mt-5 w-full rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">
-              문의 보내기
+            <button type="submit" className="mt-5 w-full rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+              이메일로 문의하기
             </button>
           </form>
         </div>
