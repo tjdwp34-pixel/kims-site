@@ -104,12 +104,83 @@ export default function FestivalAgencySiteMockup() {
         "/portfolio-10-6.jpg",
         "/portfolio-10-7.jpg",
       ],
+        },
+    {
+      id: "jangahn-carrot-market-1",
+      title: "제 1회 장안 짤짤이 어린이 당근 마켓",
+      tag: "Festival",
+      year: "2024",
+      location: "서울 동대문구",
+      image: "/portfolio-11.jpg",
+      desc: "어린이 참여형 플리마켓 행사로, 체험과 거래 활동을 결합한 교육형 프로그램을 기획·운영한 프로젝트",
+      detail: "제 1회 장안 짤짤이 어린이 당근 마켓은 어린이들이 직접 물건을 사고파는 경험을 통해 경제 개념을 자연스럽게 익힐 수 있도록 기획된 참여형 행사입니다. 플리마켓 운영, 체험 프로그램, 현장 동선 설계, 안전 관리, 운영 인력 배치까지 전반적인 행사 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: [
+        "/portfolio-11.jpg",
+        "/portfolio-11-2.jpg",
+        "/portfolio-11-3.jpg",
+        "/portfolio-11-4.jpg",
+        "/portfolio-11-5.jpg",
+        "/portfolio-11-6.jpg",
+        "/portfolio-11-7.jpg",
+        "/portfolio-11-8.jpg",
+        "/portfolio-11-9.jpg",
+        "/portfolio-11-10.jpg",
+      ],
+        },
+    {
+      id: "malcon-market-series",
+      title: "1회~6회 말콩달콩 플리마켓 축제",
+      tag: "Festival",
+      year: "2024",
+      location: "서울 중랑구",
+      image: "/portfolio-12.jpg",
+      desc: "지역 기반 플리마켓 축제로, 반복 운영을 통해 안정적인 행사 구조와 참여형 콘텐츠를 구축한 프로젝트",
+      detail: "1회부터 6회까지 진행된 말콩달콩 플리마켓 축제는 지역 주민과 방문객이 함께 참여하는 지속형 행사로, 셀러 운영, 체험 프로그램, 무대 구성, 현장 동선 설계, 운영 인력 배치 및 안전 관리까지 전반적인 운영을 반복적으로 수행하며 완성도를 높인 프로젝트입니다.",
+      gallery: [
+        "/portfolio-12.jpg",
+        "/portfolio-12-2.jpg",
+        "/portfolio-12-3.jpg",
+        "/portfolio-12-4.jpg",
+        "/portfolio-12-5.jpg",
+        "/portfolio-12-6.jpg",
+        "/portfolio-12-7.jpg",
+        "/portfolio-12-8.jpg",
+        "/portfolio-12-9.jpg",
+        "/portfolio-12-10.jpg",
+        "/portfolio-12-11.jpg",
+      ],
+    },
+    {
+      id: "jungnang-green-festival",
+      title: "중랑그린 페스티벌",
+      tag: "Festival",
+      year: "2023",
+      location: "서울 중랑구",
+      image: "/portfolio-13.jpg",
+      desc: "친환경 테마로 진행된 지역 축제로, 체험 프로그램과 무대 운영을 통합 기획한 프로젝트",
+      detail: "중랑그린 페스티벌은 친환경과 지역 커뮤니티를 주제로 기획된 행사로, 체험형 프로그램, 친환경 부스, 무대 운영, 현장 동선 설계 및 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: [
+        "/portfolio-13.jpg",
+        "/portfolio-13-2.jpg",
+        "/portfolio-13-3.jpg",
+        "/portfolio-13-4.jpg",
+        "/portfolio-13-5.jpg",
+        "/portfolio-13-6.jpg",
+        "/portfolio-13-7.jpg",
+        "/portfolio-13-8.jpg",
+        "/portfolio-13-9.jpg",
+        "/portfolio-13-10.jpg",
+        "/portfolio-13-11.jpg",
+      ],
     }
   ]
 
   const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState(null)
   const portfolioDetailRef = useRef(null)
+  const portfolioListRef = useRef(null)
+  const portfolioAutoScrollTimeoutRef = useRef(null)
 
   const [form, setForm] = useState({
     name: "",
@@ -142,9 +213,13 @@ ${form.message}`
     window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
   }
 
+  const sortedPortfolio = useMemo(() => {
+    return [...portfolio].sort((a, b) => Number(b.year) - Number(a.year))
+  }, [portfolio])
+
   const selectedPortfolio = useMemo(
-    () => portfolio.find((item) => item.id === selectedPortfolioId) ?? portfolio[0],
-    [portfolio, selectedPortfolioId]
+    () => sortedPortfolio.find((item) => item.id === selectedPortfolioId) ?? sortedPortfolio[0],
+    [sortedPortfolio, selectedPortfolioId]
   )
 
   const handlePortfolioSelect = (id) => {
@@ -171,6 +246,74 @@ ${form.message}`
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
+
+  useEffect(() => {
+    const container = portfolioListRef.current
+    if (!container) return
+
+    let animationFrameId = null
+    let lastTime = 0
+    let isPaused = false
+    let pauseUntil = Date.now() + 2000
+
+    const pauseAutoScroll = (delay = 2500) => {
+      pauseUntil = Date.now() + delay
+    }
+
+    const step = (time) => {
+      if (!lastTime) lastTime = time
+      const delta = time - lastTime
+      lastTime = time
+
+      if (!isPaused && Date.now() > pauseUntil) {
+        const maxScrollLeft = container.scrollWidth - container.clientWidth
+        if (maxScrollLeft > 0) {
+          if (container.scrollLeft >= maxScrollLeft - 1) {
+            container.scrollTo({ left: 0, behavior: "smooth" })
+            pauseUntil = Date.now() + 1200
+          } else {
+            container.scrollLeft += delta * 0.09
+          }
+        }
+      }
+
+      animationFrameId = window.requestAnimationFrame(step)
+    }
+
+    const handleMouseEnter = () => {
+      isPaused = true
+    }
+
+    const handleMouseLeave = () => {
+      isPaused = false
+      pauseAutoScroll(1800)
+    }
+
+    const handleInteraction = () => {
+      pauseAutoScroll(3000)
+    }
+
+    animationFrameId = window.requestAnimationFrame(step)
+    container.addEventListener("mouseenter", handleMouseEnter)
+    container.addEventListener("mouseleave", handleMouseLeave)
+    container.addEventListener("touchstart", handleInteraction, { passive: true })
+    container.addEventListener("touchmove", handleInteraction, { passive: true })
+    container.addEventListener("wheel", handleInteraction, { passive: true })
+    container.addEventListener("scroll", handleInteraction, { passive: true })
+
+    return () => {
+      if (animationFrameId) window.cancelAnimationFrame(animationFrameId)
+      container.removeEventListener("mouseenter", handleMouseEnter)
+      container.removeEventListener("mouseleave", handleMouseLeave)
+      container.removeEventListener("touchstart", handleInteraction)
+      container.removeEventListener("touchmove", handleInteraction)
+      container.removeEventListener("wheel", handleInteraction)
+      container.removeEventListener("scroll", handleInteraction)
+      if (portfolioAutoScrollTimeoutRef.current) {
+        clearTimeout(portfolioAutoScrollTimeoutRef.current)
+      }
+    }
+  }, [sortedPortfolio])
 
   const rentals = [
     {
@@ -201,7 +344,9 @@ ${form.message}`
                 src="/logo.png"
                 alt="KIMS logo"
                 className="h-12 w-auto object-contain shrink-0 brightness-0 contrast-200 sm:h-16"
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                }}
               />
             </div>
             <div>
@@ -331,19 +476,20 @@ ${form.message}`
           <a href="#contact" className="rounded-2xl border px-4 py-2 text-sm font-semibold hover:bg-zinc-50">견적 문의</a>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {portfolio.map((item) => (
-            <article key={item.id} className="overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+        <div ref={portfolioListRef} className="mt-6 flex gap-6 overflow-x-auto pb-3">
+          {sortedPortfolio.map((item) => (
+            <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:min-w-[320px] sm:max-w-[320px]">
               <div className="relative h-64 overflow-hidden bg-zinc-200">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                    const next = e.currentTarget.nextElementSibling
-                    if (next) next.classList.remove('hidden')
-                  }}
+                  className="h-full w-full cursor-pointer object-cover"
+                  onClick={() => setLightboxImage(item.image)}
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      const next = e.currentTarget.nextElementSibling
+                      if (next) next.classList.remove('hidden')
+                    }}
                 />
                 <div className="hidden h-full w-full items-center justify-center bg-zinc-100 text-sm text-zinc-500">
                   포트폴리오 사진 준비중
@@ -385,14 +531,15 @@ ${form.message}`
 
           <p className="mt-6 max-w-3xl text-sm leading-7 text-zinc-300">{selectedPortfolio?.detail}</p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 flex gap-4 overflow-x-auto pb-2">
             {selectedPortfolio?.gallery.map((image, index) => (
-              <div key={image} className="overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
+              <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
                 <div className="h-56 bg-zinc-800">
                   <img
                     src={image}
                     alt={`${selectedPortfolio?.title} 사진 ${index + 1}`}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full cursor-pointer object-cover"
+                    onClick={() => setLightboxImage(image)}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
                       const next = e.currentTarget.nextElementSibling
@@ -478,6 +625,19 @@ ${form.message}`
           <p>행사 · 축제 기획 / 현장 운영 / 장비 렌탈 / 영상 제작</p>
         </div>
       </footer>
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setLightboxImage(null)}
+        >
+          <img
+            src={lightboxImage}
+            alt="확대 이미지"
+            className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl"
+          />
+        </div>
+      )}
     </div>
   )
 }
