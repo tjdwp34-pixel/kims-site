@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 export default function FestivalAgencySiteMockup() {
   const services = [
@@ -108,6 +108,8 @@ export default function FestivalAgencySiteMockup() {
   ]
 
   const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const portfolioDetailRef = useRef(null)
 
   const [form, setForm] = useState({
     name: "",
@@ -145,6 +147,31 @@ ${form.message}`
     [portfolio, selectedPortfolioId]
   )
 
+  const handlePortfolioSelect = (id) => {
+    setSelectedPortfolioId(id)
+    setMobileMenuOpen(false)
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        portfolioDetailRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }, 120)
+    })
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
   const rentals = [
     {
       title: "무대 렌탈",
@@ -167,19 +194,19 @@ ${form.message}`
   return (
     <div className="min-h-screen bg-white text-zinc-900">
       <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+          <div className="flex min-w-0 items-center gap-3">
             <div className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-zinc-200">
               <img
                 src="/logo.png"
                 alt="KIMS logo"
-                className="h-16 w-auto object-contain shrink-0 brightness-0 contrast-200"
+                className="h-12 w-auto object-contain shrink-0 brightness-0 contrast-200 sm:h-16"
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
               />
             </div>
             <div>
-              <p className="text-xl font-bold tracking-tight">KIMS entertainment</p>
-              <p className="text-xs text-zinc-500">행사 · 축제 기획 / 운영 / 렌탈</p>
+              <p className="text-base font-bold tracking-tight sm:text-xl">KIMS entertainment</p>
+              <p className="text-[11px] text-zinc-500 sm:text-xs">행사 · 축제 기획 / 운영 / 렌탈</p>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
@@ -189,31 +216,50 @@ ${form.message}`
             <a href="#rental" className="hover:text-zinc-600">렌탈</a>
             <a href="#contact" className="hover:text-zinc-600">문의</a>
           </nav>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-xl border px-3 py-2 text-sm font-semibold md:hidden"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label="모바일 메뉴 열기"
+          >
+            {mobileMenuOpen ? "닫기" : "메뉴"}
+          </button>
         </div>
+        {mobileMenuOpen && (
+          <div className="border-t bg-white md:hidden">
+            <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 text-sm font-semibold sm:px-6">
+              <a href="#about" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">회사소개</a>
+              <a href="#services" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">사업영역</a>
+              <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">포트폴리오</a>
+              <a href="#rental" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">렌탈</a>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">문의</a>
+            </div>
+          </div>
+        )}
       </header>
 
       <section className="border-b bg-zinc-950 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 md:grid-cols-2 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 sm:py-20 md:grid-cols-2 md:gap-10 md:py-28">
           <div className="flex flex-col justify-center">
             <p className="mb-3 text-sm uppercase tracking-[0.25em] text-zinc-400">Event & Festival Agency</p>
-            <h1 className="text-4xl font-black leading-tight md:text-6xl">
+            <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
               행사와 축제를
               <br />
               가장 현장답게 만듭니다
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-zinc-300 md:text-lg">
+            <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-300 sm:text-base md:text-lg">
               기획부터 연출, 운영, 장비 렌탈, 영상 제작까지 한 번에 진행하는 행사·축제 전문 대행사입니다.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">
                 프로젝트 문의하기
               </a>
-              <a href="#portfolio" className="rounded-2xl border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
+              <a href="#portfolio" className="rounded-2xl border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">
                 포트폴리오 보기
               </a>
             </div>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2">
             <div className="rounded-3xl bg-white/10 p-6 shadow-lg">
               <p className="text-sm text-zinc-400">기획</p>
               <p className="mt-2 text-2xl font-bold">브랜드 행사 · 지역 축제 · 공공 행사</p>
@@ -234,7 +280,7 @@ ${form.message}`
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="about" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">About</p>
@@ -256,8 +302,8 @@ ${form.message}`
         </div>
       </section>
 
-      <section id="services" className="bg-zinc-50 py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="services" className="bg-zinc-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Services</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">사업 영역</h2>
@@ -273,8 +319,8 @@ ${form.message}`
         </div>
       </section>
 
-      <section id="portfolio" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
+      <section id="portfolio" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Portfolio</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">주요 프로젝트</h2>
@@ -283,14 +329,6 @@ ${form.message}`
             </p>
           </div>
           <a href="#contact" className="rounded-2xl border px-4 py-2 text-sm font-semibold hover:bg-zinc-50">견적 문의</a>
-        </div>
-
-        <div className="mb-8 rounded-3xl bg-zinc-50 p-5 ring-1 ring-zinc-100">
-          <p className="text-sm font-semibold text-zinc-800">포트폴리오 사진 넣는 방법</p>
-          <p className="mt-2 text-sm leading-7 text-zinc-600">
-            아래 카드에 연결된 이미지 파일명을 기준으로 행사 사진을 public 폴더에 넣으면 바로 반영됩니다.
-            예: /public/portfolio-1.jpg, /public/portfolio-7.jpg
-          </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -321,7 +359,7 @@ ${form.message}`
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{item.desc}</p>
                 <button
                   type="button"
-                  onClick={() => setSelectedPortfolioId(item.id)}
+                  onClick={() => handlePortfolioSelect(item.id)}
                   className="mt-5 rounded-2xl bg-zinc-950 px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
                   상세보기
@@ -331,7 +369,7 @@ ${form.message}`
           ))}
         </div>
 
-        <div className="mt-12 rounded-[2rem] border bg-zinc-950 p-6 text-white shadow-xl md:p-8">
+        <div ref={portfolioDetailRef} className="mt-12 rounded-[2rem] border bg-zinc-950 p-5 text-white shadow-xl transition-all duration-500 sm:p-6 md:p-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">Portfolio Detail</p>
@@ -347,7 +385,7 @@ ${form.message}`
 
           <p className="mt-6 max-w-3xl text-sm leading-7 text-zinc-300">{selectedPortfolio?.detail}</p>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {selectedPortfolio?.gallery.map((image, index) => (
               <div key={image} className="overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
                 <div className="h-56 bg-zinc-800">
@@ -373,8 +411,8 @@ ${form.message}`
         </div>
       </section>
 
-      <section id="rental" className="bg-zinc-950 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="rental" className="bg-zinc-950 py-16 text-white sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">Rental</p>
@@ -396,7 +434,7 @@ ${form.message}`
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="contact" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
@@ -412,7 +450,7 @@ ${form.message}`
 
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="rounded-3xl border bg-zinc-50 p-6 shadow-sm">
+          <form onSubmit={handleSubmit} className="rounded-3xl border bg-zinc-50 p-5 shadow-sm sm:p-6">
             <div className="grid gap-4 md:grid-cols-2">
               <input name="name" value={form.name} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="담당자명" />
               <input name="phone" value={form.phone} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="연락처" />
@@ -435,7 +473,7 @@ ${form.message}`
       </section>
 
       <footer className="border-t bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-zinc-500 sm:px-6 md:flex-row md:items-center md:justify-between">
           <p>© 2026 KIMS entertainment. All rights reserved.</p>
           <p>행사 · 축제 기획 / 현장 운영 / 장비 렌탈 / 영상 제작</p>
         </div>
