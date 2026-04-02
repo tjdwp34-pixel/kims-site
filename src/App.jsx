@@ -172,12 +172,35 @@ export default function FestivalAgencySiteMockup() {
         "/portfolio-13-10.jpg",
         "/portfolio-13-11.jpg",
       ],
+    },
+    {
+      id: "dongbu-makgeolli-festival-series",
+      title: "제 1회, 제 2회 동부시장 막걸리 축제",
+      tag: "Festival",
+      year: "2024",
+      location: "서울 중랑구",
+      image: "/portfolio-14.jpg",
+      desc: "전통시장 활성화를 위한 막걸리 테마 축제로, 먹거리·체험·공연을 결합한 참여형 행사 운영 프로젝트",
+      detail: "동부시장 막걸리 축제는 전통시장 활성화를 목적으로 기획된 지역 축제로, 막걸리 시음, 먹거리 부스, 공연 프로그램, 체험 콘텐츠를 결합한 참여형 행사입니다. 현장 동선 설계, 무대 운영, 인력 배치, 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: [
+        "/portfolio-14.jpg",
+        "/portfolio-14-2.jpg",
+        "/portfolio-14-3.jpg",
+        "/portfolio-14-4.jpg",
+        "/portfolio-14-5.jpg",
+        "/portfolio-14-6.jpg",
+        "/portfolio-14-7.jpg",
+        "/portfolio-14-8.jpg",
+        "/portfolio-14-9.jpg",
+        "/portfolio-14-10.jpg",
+      ],
     }
   ]
 
   const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [lightboxImage, setLightboxImage] = useState(null)
+  const [heroIndex, setHeroIndex] = useState(0)
   const portfolioDetailRef = useRef(null)
   const portfolioListRef = useRef(null)
   const portfolioAutoScrollTimeoutRef = useRef(null)
@@ -196,7 +219,7 @@ export default function FestivalAgencySiteMockup() {
     setForm((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     const subject = encodeURIComponent(`[문의] ${form.project || "프로젝트 문의"}`)
@@ -210,12 +233,64 @@ export default function FestivalAgencySiteMockup() {
 ${form.message}`
     )
 
-    window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
+    const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"
+    const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"
+    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"
+
+    const isEmailJsConfigured =
+      EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY" &&
+      EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID" &&
+      EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID"
+
+    if (!isEmailJsConfigured) {
+      window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
+      return
+    }
+
+    try {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            user_name: form.name,
+            user_phone: form.phone,
+            user_email: form.email,
+            project_name: form.project,
+            inquiry_type: form.type,
+            message: form.message,
+          },
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error("EmailJS 전송 실패")
+      }
+
+      alert("문의가 전송되었습니다.")
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        project: "",
+        type: "",
+        message: "",
+      })
+    } catch (error) {
+      window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
+    }
   }
 
   const sortedPortfolio = useMemo(() => {
     return [...portfolio].sort((a, b) => Number(b.year) - Number(a.year))
   }, [portfolio])
+
+  const featuredPortfolio = useMemo(() => sortedPortfolio.slice(0, 3), [sortedPortfolio])
 
   const selectedPortfolio = useMemo(
     () => sortedPortfolio.find((item) => item.id === selectedPortfolioId) ?? sortedPortfolio[0],
@@ -315,6 +390,16 @@ ${form.message}`
     }
   }, [sortedPortfolio])
 
+  useEffect(() => {
+    if (!featuredPortfolio.length) return
+
+    const interval = window.setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % featuredPortfolio.length)
+    }, 3500)
+
+    return () => window.clearInterval(interval)
+  }, [featuredPortfolio])
+
   const rentals = [
     {
       title: "무대 렌탈",
@@ -404,22 +489,53 @@ ${form.message}`
               </a>
             </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2">
-            <div className="rounded-3xl bg-white/10 p-6 shadow-lg">
-              <p className="text-sm text-zinc-400">기획</p>
-              <p className="mt-2 text-2xl font-bold">브랜드 행사 · 지역 축제 · 공공 행사</p>
-            </div>
-            <div className="rounded-3xl bg-white/10 p-6 shadow-lg">
-              <p className="text-sm text-zinc-400">운영</p>
-              <p className="mt-2 text-2xl font-bold">현장 동선 · 진행 · 인력 · 안전 관리</p>
-            </div>
-            <div className="rounded-3xl bg-white/10 p-6 shadow-lg">
-              <p className="text-sm text-zinc-400">장비</p>
-              <p className="mt-2 text-2xl font-bold">무대 · 음향 · 조명 · 영상 렌탈</p>
-            </div>
-            <div className="rounded-3xl bg-white/10 p-6 shadow-lg">
-              <p className="text-sm text-zinc-400">제작</p>
-              <p className="mt-2 text-2xl font-bold">스케치 영상 · 홍보 콘텐츠 · 송출 영상</p>
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
+            {featuredPortfolio.map((item, index) => (
+              <div
+                key={item.id}
+                className={`absolute inset-0 transition-all duration-700 ${index === heroIndex ? "opacity-100" : "pointer-events-none opacity-0"}`}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+              </div>
+            ))}
+
+            <div className="relative flex min-h-[360px] flex-col justify-end p-6 sm:min-h-[420px] sm:p-8">
+              <div className="max-w-md rounded-3xl bg-black/35 p-5 backdrop-blur-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-300">Featured Portfolio</p>
+                <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{featuredPortfolio[heroIndex]?.title}</h2>
+                <div className="mt-4 flex flex-wrap gap-2 text-xs">
+                  <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{featuredPortfolio[heroIndex]?.year}</span>
+                  <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{featuredPortfolio[heroIndex]?.location}</span>
+                </div>
+                <p className="mt-4 text-sm leading-7 text-zinc-200">{featuredPortfolio[heroIndex]?.desc}</p>
+                <button
+                  type="button"
+                  onClick={() => handlePortfolioSelect(featuredPortfolio[heroIndex]?.id)}
+                  className="mt-5 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-zinc-950"
+                >
+                  대표 프로젝트 보기
+                </button>
+              </div>
+
+              <div className="mt-6 flex gap-2">
+                {featuredPortfolio.map((item, index) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setHeroIndex(index)}
+                    className={`h-2 rounded-full transition-all ${index === heroIndex ? "w-10 bg-white" : "w-2 bg-white/40"}`}
+                    aria-label={`${item.title} 보기`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -587,7 +703,7 @@ ${form.message}`
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의 메일 작성</h2>
             <p className="mt-5 text-base leading-8 text-zinc-600">
-              필요한 내용을 작성하시면 이메일 작성창이 열리며, 확인 후 보내기를 눌러 문의를 전송할 수 있습니다.
+              필요한 내용을 작성하시면 문의가 전송되며, 자동 전송 설정이 연결되지 않은 경우 이메일 작성창으로 연결됩니다.
             </p>
             <div className="mt-8 space-y-3 text-sm text-zinc-700">
               <p><span className="font-semibold">Tel.</span> 010-7604-0025</p>
