@@ -203,7 +203,7 @@ export default function FestivalAgencySiteMockup() {
   const [heroIndex, setHeroIndex] = useState(0)
   const portfolioDetailRef = useRef(null)
   const portfolioListRef = useRef(null)
-  const portfolioAutoScrollTimeoutRef = useRef(null)
+  const portfolioGalleryRef = useRef(null)
 
   const [form, setForm] = useState({
     name: "",
@@ -311,6 +311,28 @@ ${form.message}`
     })
   }
 
+  const handleGalleryMove = (direction) => {
+    const container = portfolioGalleryRef.current
+    if (!container) return
+
+    const scrollAmount = Math.max(container.clientWidth * 0.75, 260)
+    container.scrollBy({
+      left: direction === "next" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
+    })
+  }
+
+  const handlePortfolioListMove = (direction) => {
+    const container = portfolioListRef.current
+    if (!container) return
+
+    const scrollAmount = Math.max(container.clientWidth * 0.82, 300)
+    container.scrollBy({
+      left: direction === "next" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
+    })
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -322,74 +344,7 @@ ${form.message}`
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  useEffect(() => {
-    const container = portfolioListRef.current
-    if (!container) return
-
-    let animationFrameId = null
-    let lastTime = 0
-    let isPaused = false
-    let pauseUntil = Date.now() + 2000
-
-    const pauseAutoScroll = (delay = 2500) => {
-      pauseUntil = Date.now() + delay
-    }
-
-    const step = (time) => {
-      if (!lastTime) lastTime = time
-      const delta = time - lastTime
-      lastTime = time
-
-      if (!isPaused && Date.now() > pauseUntil) {
-        const maxScrollLeft = container.scrollWidth - container.clientWidth
-        if (maxScrollLeft > 0) {
-          if (container.scrollLeft >= maxScrollLeft - 1) {
-            container.scrollTo({ left: 0, behavior: "smooth" })
-            pauseUntil = Date.now() + 1200
-          } else {
-            container.scrollLeft += delta * 0.09
-          }
-        }
-      }
-
-      animationFrameId = window.requestAnimationFrame(step)
-    }
-
-    const handleMouseEnter = () => {
-      isPaused = true
-    }
-
-    const handleMouseLeave = () => {
-      isPaused = false
-      pauseAutoScroll(1800)
-    }
-
-    const handleInteraction = () => {
-      pauseAutoScroll(3000)
-    }
-
-    animationFrameId = window.requestAnimationFrame(step)
-    container.addEventListener("mouseenter", handleMouseEnter)
-    container.addEventListener("mouseleave", handleMouseLeave)
-    container.addEventListener("touchstart", handleInteraction, { passive: true })
-    container.addEventListener("touchmove", handleInteraction, { passive: true })
-    container.addEventListener("wheel", handleInteraction, { passive: true })
-    container.addEventListener("scroll", handleInteraction, { passive: true })
-
-    return () => {
-      if (animationFrameId) window.cancelAnimationFrame(animationFrameId)
-      container.removeEventListener("mouseenter", handleMouseEnter)
-      container.removeEventListener("mouseleave", handleMouseLeave)
-      container.removeEventListener("touchstart", handleInteraction)
-      container.removeEventListener("touchmove", handleInteraction)
-      container.removeEventListener("wheel", handleInteraction)
-      container.removeEventListener("scroll", handleInteraction)
-      if (portfolioAutoScrollTimeoutRef.current) {
-        clearTimeout(portfolioAutoScrollTimeoutRef.current)
-      }
-    }
-  }, [sortedPortfolio])
-
+  
   useEffect(() => {
     if (!featuredPortfolio.length) return
 
@@ -423,7 +378,7 @@ ${form.message}`
     <div className="min-h-screen bg-white text-zinc-900">
       <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-          <div className="flex min-w-0 items-center gap-3">
+          <div className="flex min-w-0 items-center gap-4">
             <div className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-zinc-200">
               <img
                 src="/logo.png"
@@ -435,8 +390,8 @@ ${form.message}`
               />
             </div>
             <div>
-              <p className="text-base font-bold tracking-tight sm:text-xl">킴스기획 KIMS entertainment</p>
-              <p className="text-[11px] text-zinc-500 sm:text-xs">행사 · 축제 기획 / 운영 / 렌탈</p>
+              <p className="text-sm font-bold tracking-tight sm:text-xl">킴스기획 KIMS entertainment</p>
+              <p className="mt-1 text-[11px] leading-relaxed text-zinc-500 sm:text-xs">행사 · 축제 기획 / 운영 / 렌탈</p>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
@@ -469,10 +424,10 @@ ${form.message}`
       </header>
 
       <section className="border-b bg-zinc-950 text-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 sm:py-20 md:grid-cols-2 md:gap-10 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-[0.95fr_1.05fr] md:gap-10 md:py-24">
           <div className="flex flex-col justify-center">
             <p className="mb-3 text-sm uppercase tracking-[0.25em] text-zinc-400">Event & Festival Agency</p>
-            <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
+            <h1 className="max-w-[7.5em] text-[2.6rem] font-black leading-[0.95] sm:max-w-none sm:text-5xl md:text-6xl">
               행사와 축제를
               <br />
               가장 현장답게 만듭니다
@@ -503,19 +458,19 @@ ${form.message}`
                     e.currentTarget.style.display = 'none'
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
               </div>
             ))}
 
             <div className="relative flex min-h-[360px] flex-col justify-end p-6 sm:min-h-[420px] sm:p-8">
-              <div className="max-w-md rounded-3xl bg-black/35 p-5 backdrop-blur-sm">
+              <div className="max-w-md rounded-3xl bg-black/20 p-5 backdrop-blur-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-300">Featured Portfolio</p>
                 <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{featuredPortfolio[heroIndex]?.title}</h2>
                 <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{featuredPortfolio[heroIndex]?.year}</span>
-                  <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{featuredPortfolio[heroIndex]?.location}</span>
+                  <span className="rounded-full bg-white/15 px-3 py-1 font-semibold text-white">{featuredPortfolio[heroIndex]?.year}</span>
+                  <span className="rounded-full bg-white/15 px-3 py-1 font-semibold text-zinc-100">{featuredPortfolio[heroIndex]?.location}</span>
                 </div>
-                <p className="mt-4 text-sm leading-7 text-zinc-200">{featuredPortfolio[heroIndex]?.desc}</p>
+                <p className="mt-4 text-sm leading-7 text-zinc-100">{featuredPortfolio[heroIndex]?.desc}</p>
                 <button
                   type="button"
                   onClick={() => handlePortfolioSelect(featuredPortfolio[heroIndex]?.id)}
@@ -525,48 +480,64 @@ ${form.message}`
                 </button>
               </div>
 
-              <div className="mt-6 flex gap-2">
-                {featuredPortfolio.map((item, index) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => setHeroIndex(index)}
-                    className={`h-2 rounded-full transition-all ${index === heroIndex ? "w-10 bg-white" : "w-2 bg-white/40"}`}
-                    aria-label={`${item.title} 보기`}
-                  />
-                ))}
-              </div>
+              <button
+                type="button"
+                onClick={() => setHeroIndex((prev) => (prev - 1 + featuredPortfolio.length) % featuredPortfolio.length)}
+                className="absolute left-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-lg text-white backdrop-blur-sm transition hover:bg-black/50 sm:left-5 sm:h-12 sm:w-12"
+                aria-label="이전 대표 프로젝트"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setHeroIndex((prev) => (prev + 1) % featuredPortfolio.length)}
+                className="absolute right-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-lg text-white backdrop-blur-sm transition hover:bg-black/50 sm:right-5 sm:h-12 sm:w-12"
+                aria-label="다음 대표 프로젝트"
+              >
+                ›
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       <section id="about" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
+        <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">About</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">About</p>
+            <h2 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
             <p className="mt-6 text-base leading-8 text-zinc-600">
               킴스기획(KIMS entertainment)은 행사와 축제를 단순히 진행하는 것이 아니라, 현장의 목적과 분위기를 함께 설계하는 팀입니다.
               클라이언트의 목표에 맞는 기획안 작성부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 통합적으로 제안합니다.
             </p>
           </div>
-          <div className="rounded-3xl border bg-zinc-50 p-8 shadow-sm">
-            <p className="text-lg font-bold">핵심 강점</p>
-            <ul className="mt-4 space-y-3 text-sm leading-7 text-zinc-700">
-              <li>• 행사 기획 + 현장 운영 + 장비 렌탈 통합 진행</li>
-              <li>• 축제/공공행사/기업 프로모션 맞춤 제안</li>
-              <li>• 무대·음향·조명·영상 장비 자체 연계 가능</li>
-              <li>• 일정, 예산, 콘셉트에 맞춘 실무형 플랜 구성</li>
-            </ul>
+          <div className="overflow-hidden rounded-[2rem] border bg-zinc-100 shadow-sm">
+            <img
+              src={featuredPortfolio[0]?.image}
+              alt="킴스기획 대표 프로젝트 이미지"
+              className="h-full min-h-[280px] w-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+              }}
+            />
           </div>
+        </div>
+        <div className="mt-8 rounded-3xl border bg-zinc-50 p-8 shadow-sm">
+          <p className="text-lg font-bold">핵심 강점</p>
+          <ul className="mt-4 grid gap-3 text-sm leading-7 text-zinc-700 md:grid-cols-2">
+            <li>• 행사 기획 + 현장 운영 + 장비 렌탈 통합 진행</li>
+            <li>• 축제/공공행사/기업 프로모션 맞춤 제안</li>
+            <li>• 무대·음향·조명·영상 장비 자체 연계 가능</li>
+            <li>• 일정, 예산, 콘셉트에 맞춘 실무형 플랜 구성</li>
+          </ul>
         </div>
       </section>
 
       <section id="services" className="bg-zinc-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Services</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">Services</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">사업 영역</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -592,7 +563,26 @@ ${form.message}`
           <a href="#contact" className="rounded-2xl border px-4 py-2 text-sm font-semibold hover:bg-zinc-50">견적 문의</a>
         </div>
 
-        <div ref={portfolioListRef} className="mt-6 flex gap-6 overflow-x-auto pb-3">
+        <div className="relative mt-6">
+          <button
+            type="button"
+            onClick={() => handlePortfolioListMove("prev")}
+            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:left-4 sm:h-12 sm:w-12"
+            aria-label="이전 포트폴리오 보기"
+          >
+            ‹
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handlePortfolioListMove("next")}
+            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:right-4 sm:h-12 sm:w-12"
+            aria-label="다음 포트폴리오 보기"
+          >
+            ›
+          </button>
+
+          <div ref={portfolioListRef} className="flex gap-6 overflow-x-hidden px-12 pb-3 sm:px-16">
           {sortedPortfolio.map((item) => (
             <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:min-w-[320px] sm:max-w-[320px]">
               <div className="relative h-64 overflow-hidden bg-zinc-200">
@@ -601,11 +591,11 @@ ${form.message}`
                   alt={item.title}
                   className="h-full w-full cursor-pointer object-cover"
                   onClick={() => setLightboxImage(item.image)}
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      const next = e.currentTarget.nextElementSibling
-                      if (next) next.classList.remove('hidden')
-                    }}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const next = e.currentTarget.nextElementSibling
+                    if (next) next.classList.remove('hidden')
+                  }}
                 />
                 <div className="hidden h-full w-full items-center justify-center bg-zinc-100 text-sm text-zinc-500">
                   포트폴리오 사진 준비중
@@ -629,6 +619,7 @@ ${form.message}`
               </div>
             </article>
           ))}
+          </div>
         </div>
 
         <div ref={portfolioDetailRef} className="mt-12 rounded-[2rem] border bg-zinc-950 p-5 text-white shadow-xl transition-all duration-500 sm:p-6 md:p-8">
@@ -647,10 +638,29 @@ ${form.message}`
 
           <p className="mt-6 max-w-3xl text-sm leading-7 text-zinc-300">{selectedPortfolio?.detail}</p>
 
-          <div className="mt-8 flex gap-4 overflow-x-auto pb-2">
+          <div className="relative mt-8">
+            <button
+              type="button"
+              onClick={() => handleGalleryMove("prev")}
+              className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:left-4 sm:h-12 sm:w-12"
+              aria-label="이전 사진 보기"
+            >
+              ‹
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleGalleryMove("next")}
+              className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:right-4 sm:h-12 sm:w-12"
+              aria-label="다음 사진 보기"
+            >
+              ›
+            </button>
+
+            <div ref={portfolioGalleryRef} className="flex gap-4 overflow-x-hidden px-12 pb-2 sm:px-16">
             {selectedPortfolio?.gallery.map((image, index) => (
-              <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
-                <div className="h-56 bg-zinc-800">
+              <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
+                <div className="h-56 bg-zinc-800 sm:h-64">
                   <img
                     src={image}
                     alt={`${selectedPortfolio?.title} 사진 ${index + 1}`}
@@ -668,9 +678,8 @@ ${form.message}`
                 </div>
               </div>
             ))}
+            </div>
           </div>
-
-          
         </div>
       </section>
 
