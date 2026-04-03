@@ -511,26 +511,65 @@ ${form.message}`
               킴스기획(KIMS entertainment)은 행사와 축제를 단순히 진행하는 것이 아니라, 현장의 목적과 분위기를 함께 설계하는 팀입니다.
               클라이언트의 목표에 맞는 기획안 작성부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 통합적으로 제안합니다.
             </p>
+            <div className="mt-8 rounded-[2rem] border bg-zinc-950 p-6 text-white shadow-xl sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Core Message</p>
+              <p className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
+                현장을 이해하는 기획이
+                <br />
+                완성도 높은 행사를 만듭니다.
+              </p>
+              <p className="mt-4 text-sm leading-7 text-zinc-300">
+                기획, 운영, 렌탈, 콘텐츠 제작까지 한 팀 안에서 유기적으로 움직이며 일정과 예산, 현장 상황에 맞춘 실무형 제안을 제공합니다.
+              </p>
+            </div>
           </div>
-          <div className="overflow-hidden rounded-[2rem] border bg-zinc-100 shadow-sm">
-            <img
-              src={featuredPortfolio[0]?.image}
-              alt="킴스기획 대표 프로젝트 이미지"
-              className="h-full min-h-[280px] w-full object-cover"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none'
-              }}
-            />
+
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-3xl border bg-white p-6 shadow-sm">
+                <p className="text-3xl font-black text-zinc-950">Festival</p>
+                <p className="mt-2 text-sm text-zinc-500">지역 축제 · 문화 행사</p>
+              </div>
+              <div className="rounded-3xl border bg-white p-6 shadow-sm">
+                <p className="text-3xl font-black text-zinc-950">Event</p>
+                <p className="mt-2 text-sm text-zinc-500">기업 행사 · 프로모션</p>
+              </div>
+              <div className="rounded-3xl border bg-white p-6 shadow-sm">
+                <p className="text-3xl font-black text-zinc-950">Rental</p>
+                <p className="mt-2 text-sm text-zinc-500">무대 · 음향 · 조명</p>
+              </div>
+              <div className="rounded-3xl border bg-white p-6 shadow-sm">
+                <p className="text-3xl font-black text-zinc-950">Video</p>
+                <p className="mt-2 text-sm text-zinc-500">스케치 · 홍보 콘텐츠</p>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border bg-zinc-50 p-6 shadow-sm sm:p-8">
+              <p className="text-lg font-bold">진행 프로세스</p>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">01</p>
+                  <p className="mt-2 font-bold">기획 및 구성</p>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">행사 목적, 예산, 타깃에 맞춘 실무형 기획안을 제안합니다.</p>
+                </div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">02</p>
+                  <p className="mt-2 font-bold">현장 설계</p>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">동선, 무대, 장비, 운영 인력까지 현장 중심으로 설계합니다.</p>
+                </div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">03</p>
+                  <p className="mt-2 font-bold">운영 및 대응</p>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">행사 당일 진행, 안전 관리, 돌발 상황 대응까지 안정적으로 운영합니다.</p>
+                </div>
+                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">04</p>
+                  <p className="mt-2 font-bold">기록 및 확장</p>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">스케치 영상, 사진, 홍보 콘텐츠로 행사 이후 활용도까지 높입니다.</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="mt-8 rounded-3xl border bg-zinc-50 p-8 shadow-sm">
-          <p className="text-lg font-bold">핵심 강점</p>
-          <ul className="mt-4 grid gap-3 text-sm leading-7 text-zinc-700 md:grid-cols-2">
-            <li>• 행사 기획 + 현장 운영 + 장비 렌탈 통합 진행</li>
-            <li>• 축제/공공행사/기업 프로모션 맞춤 제안</li>
-            <li>• 무대·음향·조명·영상 장비 자체 연계 가능</li>
-            <li>• 일정, 예산, 콘셉트에 맞춘 실무형 플랜 구성</li>
-          </ul>
         </div>
       </section>
 
