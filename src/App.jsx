@@ -741,14 +741,17 @@ ${form.message}`
           <div className="mb-12 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Rental</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">장비 렌탈 서비스</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-sm leading-7 text-zinc-300">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-300">
               무대, 음향, 조명, 영상 장비를 행사 규모와 목적에 최적화하여 구성하고, 설치부터 운영까지 원스톱으로 지원합니다.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {rentals.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm hover:bg-white/10 transition">
+              <div
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm transition hover:bg-white/10"
+              >
                 <h3 className="text-xl font-bold">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">{item.desc}</p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-400">
@@ -760,17 +763,27 @@ ${form.message}`
             ))}
           </div>
 
-          <div className="mt-12 rounded-3xl bg-white text-zinc-900 p-6 sm:p-8 shadow-lg">
-            <h3 className="text-xl font-bold">렌탈 특징</h3>
-            <div className="mt-4 grid gap-4 sm:grid-cols-3 text-sm">
-              <div>✔ 설치부터 운영까지 통합 진행</div>
-              <div>✔ 행사 규모 및 목적에 맞춘 맞춤 구성</div>
-              <div>✔ 현장 대응 및 신속한 세팅 지원</div>
+          <div className="mt-12 rounded-3xl bg-white p-6 text-zinc-900 shadow-lg sm:p-8">
+            <h3 className="text-xl font-bold">운영 지원 범위</h3>
+            <div className="mt-4 grid gap-4 text-sm sm:grid-cols-3">
+              <div>• 현장 설치 및 철거 전 과정 지원</div>
+              <div>• 행사 규모·목적 기반 장비 구성 컨설팅</div>
+              <div>• 운영 인력 및 오퍼레이터 배치</div>
             </div>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="tel:01076040025" className="flex-1 rounded-2xl bg-zinc-950 text-white text-center px-5 py-3 font-semibold">전화 문의</a>
-              <a href="#contact" className="flex-1 rounded-2xl border border-zinc-300 text-center px-5 py-3 font-semibold">빠른 견적 요청</a>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="tel:01076040025"
+                className="flex-1 rounded-2xl bg-zinc-950 px-5 py-3 text-center font-semibold text-white"
+              >
+                전화 문의
+              </a>
+              <a
+                href="#contact"
+                className="flex-1 rounded-2xl border border-zinc-300 px-5 py-3 text-center font-semibold"
+              >
+                빠른 견적 요청
+              </a>
             </div>
           </div>
         </div>
@@ -818,10 +831,10 @@ ${form.message}`
       <footer className="border-t bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-zinc-500 sm:px-6 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
-            <p>© 2026 킴스기획 KIMS entertainment. All rights reserved.</p>
+            <p>© 2026 킴스기획 KIMS entertainment.</p>
             <p>사업자번호: 830-06-03074</p>
           </div>
-          <p>행사 · 축제 기획 / 현장 운영 / 장비 렌탈 / 영상 제작</p>
+          <p>개인정보처리방침</p>
         </div>
       </footer>
 
