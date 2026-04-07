@@ -4,19 +4,19 @@ export default function FestivalAgencySiteMockup() {
   const services = [
     {
       title: "행사 기획",
-      desc: "기업행사, 지역행사, 프로모션, 브랜드 이벤트까지 목적에 맞는 기획을 제안합니다.",
+      desc: "기업 행사, 지역 행사, 프로모션, 브랜드 이벤트까지 목적과 타깃에 최적화된 기획을 제안합니다.",
     },
     {
       title: "축제 운영",
-      desc: "축제 현장 운영, 동선 설계, 인력 배치, 안전 관리까지 안정적으로 진행합니다.",
+      desc: "축제 현장 운영, 동선 설계, 인력 배치, 안전 관리까지 체계적으로 수행합니다.",
     },
     {
       title: "무대 · 음향 · 조명",
-      desc: "현장 규모와 콘셉트에 맞춰 무대 시스템과 음향·조명 장비를 구성합니다.",
+      desc: "현장 규모와 콘셉트에 최적화된 무대 시스템 및 음향·조명 장비를 설계·구성합니다.",
     },
     {
       title: "영상 제작",
-      desc: "행사 스케치, 홍보 영상, 현장 송출용 콘텐츠까지 한 번에 제작합니다.",
+      desc: "행사 스케치, 홍보 영상, 현장 송출 콘텐츠까지 통합 제작합니다.",
     },
   ]
 
@@ -358,56 +358,33 @@ ${form.message}`
   const rentals = [
     {
       title: "무대 렌탈",
-      desc: "소형 행사부터 대형 축제까지 규모에 맞는 무대 시스템을 설계·설치합니다.",
-      points: ["간이 무대", "미니 트러스", "현장 설치 및 철거", "안전 구조 설계"]
+      desc: "소형 행사부터 대형 축제까지 규모에 최적화된 무대 시스템을 설계·설치합니다.",
+      points: ["간이 무대", "미니 트러스", "현장 설치 및 철거", "안전 구조 설계"],
     },
     {
       title: "음향 장비",
-      desc: "야외 행사, 공연, 실내 이벤트까지 안정적인 음향 환경을 제공합니다.",
-      points: ["스피커", "오디오 컨트롤러", "믹싱 및 오퍼레이터 지원", "현장 맞춤 세팅"]
+      desc: "야외 행사, 공연, 실내 이벤트 등 다양한 환경에서 안정적인 음향 시스템을 제공합니다.",
+      points: ["스피커", "오디오 컨트롤러", "믹싱 및 오퍼레이터 지원", "현장 맞춤 세팅"],
     },
     {
       title: "조명 장비",
-      desc: "행사 분위기와 연출을 살리는 무대 조명 및 특수 조명을 구성합니다.",
-      points: ["무대 / 분위기 조명", "LED / 무빙라이트", "연출 디자인"]
+      desc: "행사의 분위기와 연출을 극대화하는 무대 및 특수 조명 시스템을 구성합니다.",
+      points: ["페스티벌 알전구 (스트링 조명)", "무대 / 분위기 조명", "LED / 무빙라이트", "연출 디자인"],
     },
     {
       title: "영상 · LED",
-      desc: "행사 현장 송출, 홍보 영상, LED 스크린까지 통합 지원합니다.",
-      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"]
+      desc: "현장 송출, 홍보 영상, LED 스크린까지 영상 시스템을 통합 지원합니다.",
+      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"],
     },
     {
       title: "촬영장비 대여",
-      desc: "현장 촬영부터 콘텐츠 제작까지 촬영 장비와 인력을 함께 지원합니다.",
-      points: ["오지모 360", "오지모 프로", "고프로", "현장 촬영", "영상 편집"]
+      desc: "현장 촬영부터 콘텐츠 제작까지 전문 장비와 인력을 함께 지원합니다.",
+      points: ["오지모 360", "오지모 프로", "고프로", "현장 촬영", "영상 편집"],
     },
     {
       title: "행사 물품 대여",
-      desc: "행사 운영에 필요한 소형 장비 및 소모품을 함께 대여합니다.",
-      points: ["알전구", "소화기", "배너대", "윈드 배너대"]
-    }
-  ]    },
-    {
-      title: "조명 장비",
-      desc: "행사 분위기와 연출을 살리는 무대 조명 및 특수 조명을 구성합니다.",
-      points: ["무대 / 분위기 조명", "LED / 무빙라이트", "연출 디자인"]
-    },
-    {
-      title: "영상 · LED",
-      desc: "행사 현장 송출, 홍보 영상, LED 스크린까지 통합 지원합니다.",
-      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"]
-    },
-    {
-      title: "행사 물품 대여",
-      desc: "행사 운영에 필요한 소형 장비 및 소모품을 함께 대여합니다.",
-      points: ["알전구", "소화기", "배너대", "윈드 배너대"]
-    }
-  ]
-    },
-    {
-      title: "영상 · LED",
-      desc: "행사 현장 송출, 홍보 영상, LED 스크린까지 통합 지원합니다.",
-      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"]
+      desc: "행사 운영에 필요한 다양한 장비와 소모품을 함께 대여합니다.",
+      points: ["소화기", "배너 거치대", "윈드 배너 거치대"],
     },
   ]
 
@@ -470,7 +447,7 @@ ${form.message}`
               가장 현장답게 만듭니다
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-300 sm:text-base md:text-lg">
-              킴스기획(KIMS entertainment)은 기획부터 연출, 운영, 장비 렌탈, 영상 제작까지 한 번에 진행하는 행사·축제 전문 대행사입니다.
+              킴스기획(KIMS entertainment)은 기획, 연출, 운영, 장비 렌탈, 영상 제작까지 전 과정을 통합적으로 수행하는 행사·축제 전문 대행사입니다.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">
@@ -545,18 +522,18 @@ ${form.message}`
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">About</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
             <p className="mt-6 text-base leading-8 text-zinc-600">
-              킴스기획(KIMS entertainment)은 행사와 축제를 단순히 진행하는 것이 아니라, 현장의 목적과 분위기를 함께 설계하는 팀입니다.
-              클라이언트의 목표에 맞는 기획안 작성부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 통합적으로 제안합니다.
+              킴스기획(KIMS entertainment)은 단순한 행사 진행을 넘어, 현장의 목적과 분위기를 종합적으로 설계하는 전문 기획팀입니다.
+              클라이언트의 목표에 부합하는 기획안 수립부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 전 과정을 통합적으로 제공합니다.
             </p>
             <div className="mt-8 rounded-[2rem] border bg-zinc-950 p-6 text-white shadow-xl sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Core Message</p>
               <p className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
-                현장을 이해하는 기획이
+                현장을 정확히 이해하는 기획이
                 <br />
-                완성도 높은 행사를 만듭니다.
+                행사의 완성도를 결정합니다.
               </p>
               <p className="mt-4 text-sm leading-7 text-zinc-300">
-                기획, 운영, 렌탈, 콘텐츠 제작까지 한 팀 안에서 유기적으로 움직이며 일정과 예산, 현장 상황에 맞춘 실무형 제안을 제공합니다.
+                기획, 운영, 렌탈, 콘텐츠 제작을 하나의 팀에서 유기적으로 수행하며, 일정·예산·현장 상황을 고려한 실무 중심의 솔루션을 제공합니다.
               </p>
             </div>
           </div>
@@ -765,7 +742,7 @@ ${form.message}`
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Rental</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">장비 렌탈 서비스</h2>
             <p className="mt-4 max-w-2xl mx-auto text-sm leading-7 text-zinc-300">
-              무대, 음향, 조명, 영상 장비까지 행사 규모와 목적에 맞춰 구성하며 설치부터 운영까지 함께 진행합니다.
+              무대, 음향, 조명, 영상 장비를 행사 규모와 목적에 최적화하여 구성하고, 설치부터 운영까지 원스톱으로 지원합니다.
             </p>
           </div>
 
@@ -786,9 +763,9 @@ ${form.message}`
           <div className="mt-12 rounded-3xl bg-white text-zinc-900 p-6 sm:p-8 shadow-lg">
             <h3 className="text-xl font-bold">렌탈 특징</h3>
             <div className="mt-4 grid gap-4 sm:grid-cols-3 text-sm">
-              <div>✔ 설치 + 운영까지 한번에 진행</div>
-              <div>✔ 행사 규모 맞춤 구성</div>
-              <div>✔ 현장 대응 및 빠른 세팅</div>
+              <div>✔ 설치부터 운영까지 통합 진행</div>
+              <div>✔ 행사 규모 및 목적에 맞춘 맞춤 구성</div>
+              <div>✔ 현장 대응 및 신속한 세팅 지원</div>
             </div>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -805,13 +782,14 @@ ${form.message}`
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의 메일 작성</h2>
             <p className="mt-5 text-base leading-8 text-zinc-600">
-              필요한 내용을 작성하시면 문의가 전송되며, 자동 전송 설정이 연결되지 않은 경우 이메일 작성창으로 연결됩니다.
+              필요한 내용을 작성하시면 문의가 전송되며, 자동 전송이 설정되지 않은 경우 이메일 작성 화면으로 연결됩니다.
             </p>
             <div className="mt-8 space-y-3 text-sm text-zinc-700">
               <p><span className="font-semibold">Tel.</span> 010-7604-0025</p>
               <p><span className="font-semibold">E-mail.</span> kimset11@naver.com</p>
               <p><span className="font-semibold">Fax.</span> 0504-376-0025</p>
               <p><span className="font-semibold">Kakao.</span> Kims-ent</p>
+              <p><span className="font-semibold">사업자번호.</span> 830-06-03074</p>
 
             </div>
           </div>
@@ -839,7 +817,10 @@ ${form.message}`
 
       <footer className="border-t bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-zinc-500 sm:px-6 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 킴스기획 KIMS entertainment. All rights reserved.</p>
+          <div className="space-y-1">
+            <p>© 2026 킴스기획 KIMS entertainment. All rights reserved.</p>
+            <p>사업자번호: 830-06-03074</p>
+          </div>
           <p>행사 · 축제 기획 / 현장 운영 / 장비 렌탈 / 영상 제작</p>
         </div>
       </footer>
