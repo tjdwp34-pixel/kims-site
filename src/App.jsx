@@ -358,19 +358,56 @@ ${form.message}`
   const rentals = [
     {
       title: "무대 렌탈",
-      desc: "행사 규모에 맞는 무대 시스템을 안전하게 설치하고 운영합니다.",
+      desc: "소형 행사부터 대형 축제까지 규모에 맞는 무대 시스템을 설계·설치합니다.",
+      points: ["간이 무대", "미니 트러스", "현장 설치 및 철거", "안전 구조 설계"]
     },
     {
-      title: "조명 렌탈",
-      desc: "축제와 공연 분위기를 살리는 조명 장비를 현장에 맞춰 구성합니다.",
+      title: "음향 장비",
+      desc: "야외 행사, 공연, 실내 이벤트까지 안정적인 음향 환경을 제공합니다.",
+      points: ["스피커", "오디오 컨트롤러", "믹싱 및 오퍼레이터 지원", "현장 맞춤 세팅"]
     },
     {
-      title: "음향 렌탈",
-      desc: "야외 행사와 실내 행사에 맞는 음향 장비를 안정적으로 제공합니다.",
+      title: "조명 장비",
+      desc: "행사 분위기와 연출을 살리는 무대 조명 및 특수 조명을 구성합니다.",
+      points: ["무대 / 분위기 조명", "LED / 무빙라이트", "연출 디자인"]
     },
     {
-      title: "영상 장비 렌탈",
-      desc: "LED, 빔프로젝터, 송출 장비 등 현장 운영에 필요한 영상 장비를 지원합니다.",
+      title: "영상 · LED",
+      desc: "행사 현장 송출, 홍보 영상, LED 스크린까지 통합 지원합니다.",
+      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"]
+    },
+    {
+      title: "촬영장비 대여",
+      desc: "현장 촬영부터 콘텐츠 제작까지 촬영 장비와 인력을 함께 지원합니다.",
+      points: ["오지모 360", "오지모 프로", "고프로", "현장 촬영", "영상 편집"]
+    },
+    {
+      title: "행사 물품 대여",
+      desc: "행사 운영에 필요한 소형 장비 및 소모품을 함께 대여합니다.",
+      points: ["알전구", "소화기", "배너대", "윈드 배너대"]
+    }
+  ]    },
+    {
+      title: "조명 장비",
+      desc: "행사 분위기와 연출을 살리는 무대 조명 및 특수 조명을 구성합니다.",
+      points: ["무대 / 분위기 조명", "LED / 무빙라이트", "연출 디자인"]
+    },
+    {
+      title: "영상 · LED",
+      desc: "행사 현장 송출, 홍보 영상, LED 스크린까지 통합 지원합니다.",
+      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"]
+    },
+    {
+      title: "행사 물품 대여",
+      desc: "행사 운영에 필요한 소형 장비 및 소모품을 함께 대여합니다.",
+      points: ["알전구", "소화기", "배너대", "윈드 배너대"]
+    }
+  ]
+    },
+    {
+      title: "영상 · LED",
+      desc: "행사 현장 송출, 홍보 영상, LED 스크린까지 통합 지원합니다.",
+      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"]
     },
   ]
 
@@ -724,23 +761,40 @@ ${form.message}`
 
       <section id="rental" className="bg-zinc-950 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">Rental</p>
-              <h2 className="mt-3 text-3xl font-bold md:text-4xl">렌탈 서비스</h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300">
-                행사와 축제 현장에 필요한 주요 장비를 렌탈 형태로 제공하며, 설치와 운영까지 함께 진행할 수 있습니다.
-              </p>
-            </div>
-            <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-zinc-950">렌탈 문의하기</a>
+          <div className="mb-12 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Rental</p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">장비 렌탈 서비스</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-sm leading-7 text-zinc-300">
+              무대, 음향, 조명, 영상 장비까지 행사 규모와 목적에 맞춰 구성하며 설치부터 운영까지 함께 진행합니다.
+            </p>
           </div>
+
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {rentals.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-sm">
+              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm hover:bg-white/10 transition">
                 <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-zinc-300">{item.desc}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.desc}</p>
+                <ul className="mt-4 space-y-1 text-xs text-zinc-400">
+                  {item.points.map((p) => (
+                    <li key={p}>• {p}</li>
+                  ))}
+                </ul>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 rounded-3xl bg-white text-zinc-900 p-6 sm:p-8 shadow-lg">
+            <h3 className="text-xl font-bold">렌탈 특징</h3>
+            <div className="mt-4 grid gap-4 sm:grid-cols-3 text-sm">
+              <div>✔ 설치 + 운영까지 한번에 진행</div>
+              <div>✔ 행사 규모 맞춤 구성</div>
+              <div>✔ 현장 대응 및 빠른 세팅</div>
+            </div>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="tel:01076040025" className="flex-1 rounded-2xl bg-zinc-950 text-white text-center px-5 py-3 font-semibold">전화 문의</a>
+              <a href="#contact" className="flex-1 rounded-2xl border border-zinc-300 text-center px-5 py-3 font-semibold">빠른 견적 요청</a>
+            </div>
           </div>
         </div>
       </section>
