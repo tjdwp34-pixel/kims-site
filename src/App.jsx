@@ -520,7 +520,7 @@ ${form.message}`
         <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">About</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
+            <h2 className="mt-3 whitespace-nowrap text-2xl font-bold leading-tight sm:text-3xl md:text-3xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
             <p className="mt-6 text-base leading-8 text-zinc-600">
               킴스기획(KIMS entertainment)은 단순한 행사 진행을 넘어, 현장의 목적과 분위기를 종합적으로 설계하는 전문 기획팀입니다.
               클라이언트의 목표에 부합하는 기획안 수립부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 전 과정을 통합적으로 제공합니다.
