@@ -30,13 +30,7 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-1.jpg",
       desc: "돌곶이시장 일대에서 진행된 문화 축제로, 무대 운영과 현장 동선, 프로그램 연출을 통합 진행한 프로젝트",
       detail: "돌곶이 낭만축제는 돌곶이시장 일대에서 진행된 지역 문화 행사로, 막걸리축제·야외영화관·시장장보기·낭만버스킹 등 다양한 프로그램에 맞춰 무대 운영, 관람 동선, 현장 연출, 시스템 운영을 안정적으로 진행한 프로젝트입니다.",
-      gallery: [
-        "/portfolio-1.jpg",
-        "/portfolio-1-2.jpg",
-        "/portfolio-1-3.jpg",
-        "/portfolio-1-4.jpg",
-        "/portfolio-1-5.jpg",
-      ],
+      gallery: ["/portfolio-1.jpg", "/portfolio-1-2.jpg", "/portfolio-1-3.jpg", "/portfolio-1-4.jpg", "/portfolio-1-5.jpg"],
     },
     {
       id: "jisukyoung-health-festival-2",
@@ -47,19 +41,7 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-7.jpg",
       desc: "지역 주민 참여형 건강 테마 축제로, 프로그램 운영과 현장 동선을 통합 기획·운영한 프로젝트",
       detail: "제 2회 지석영 건강축제는 서울 중랑구에서 진행된 건강 테마 축제로, 체험부스, 건강 상담, 초음파 체험, 전통 공연, 무대 프로그램, 현장 안내 동선까지 통합 운영한 행사입니다. 참여형 콘텐츠와 안정적인 현장 운영을 중심으로 구성된 프로젝트입니다.",
-      gallery: [
-        "/portfolio-7.jpg",
-        "/portfolio-7-2.jpg",
-        "/portfolio-7-3.jpg",
-        "/portfolio-7-4.jpg",
-        "/portfolio-7-5.jpg",
-        "/portfolio-7-6.jpg",
-        "/portfolio-7-7.jpg",
-        "/portfolio-7-8.jpg",
-        "/portfolio-7-9.jpg",
-        "/portfolio-7-10.jpg",
-        "/portfolio-7-11.jpg",
-      ],
+      gallery: ["/portfolio-7.jpg", "/portfolio-7-2.jpg", "/portfolio-7-3.jpg", "/portfolio-7-4.jpg", "/portfolio-7-5.jpg", "/portfolio-7-6.jpg", "/portfolio-7-7.jpg", "/portfolio-7-8.jpg", "/portfolio-7-9.jpg", "/portfolio-7-10.jpg", "/portfolio-7-11.jpg"],
     },
     {
       id: "child-traffic-safety-festival-1",
@@ -70,22 +52,8 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-9.jpg",
       desc: "어린이를 대상으로 한 교통안전 체험형 축제로, 교육 프로그램과 현장 운영을 통합 기획한 프로젝트",
       detail: "제 1회 어린이 교통안전문화 축제는 어린이들이 교통안전을 쉽고 재미있게 체험할 수 있도록 구성된 참여형 행사로, 체험 부스 운영, 안전 교육 프로그램, 무대 진행, 현장 동선 관리까지 통합적으로 기획·운영된 프로젝트입니다.",
-      gallery: [
-        "/portfolio-9.jpg",
-        "/portfolio-9-2.jpg",
-        "/portfolio-9-3.jpg",
-        "/portfolio-9-4.jpg",
-        "/portfolio-9-5.jpg",
-        "/portfolio-9-6.jpg",
-        "/portfolio-9-7.jpg",
-        "/portfolio-9-8.jpg",
-        "/portfolio-9-9.jpg",
-        "/portfolio-9-10.jpg",
-        "/portfolio-9-11.jpg",
-        "/portfolio-9-12.jpg",
-        "/portfolio-9-13.jpg",
-      ],
-        },
+      gallery: ["/portfolio-9.jpg", "/portfolio-9-2.jpg", "/portfolio-9-3.jpg", "/portfolio-9-4.jpg", "/portfolio-9-5.jpg", "/portfolio-9-6.jpg", "/portfolio-9-7.jpg", "/portfolio-9-8.jpg", "/portfolio-9-9.jpg", "/portfolio-9-10.jpg", "/portfolio-9-11.jpg", "/portfolio-9-12.jpg", "/portfolio-9-13.jpg"],
+    },
     {
       id: "jurak-festival-series",
       title: "제 2회, 제 3회 주락이 페스티벌",
@@ -95,16 +63,30 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-10.jpg",
       desc: "지역 참여형 축제로 다양한 체험 프로그램과 무대 운영을 통합 기획·운영한 프로젝트",
       detail: "제 2회 및 제 3회 주락이 페스티벌은 지역 주민과 방문객이 함께 즐길 수 있도록 기획된 참여형 축제로, 체험 부스, 공연 프로그램, 현장 동선 설계, 운영 인력 배치, 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: [
-        "/portfolio-10.jpg",
-        "/portfolio-10-2.jpg",
-        "/portfolio-10-3.jpg",
-        "/portfolio-10-4.jpg",
-        "/portfolio-10-5.jpg",
-        "/portfolio-10-6.jpg",
-        "/portfolio-10-7.jpg",
-      ],
-        },
+      gallery: ["/portfolio-10.jpg", "/portfolio-10-2.jpg", "/portfolio-10-3.jpg", "/portfolio-10-4.jpg", "/portfolio-10-5.jpg", "/portfolio-10-6.jpg", "/portfolio-10-7.jpg"],
+    },
+    {
+      id: "jangwi-kids-market-festival-1",
+      title: "제 1회 장위 어린이 나들이 장보기 축제",
+      tag: "Festival",
+      year: "2025",
+      location: "서울 성북구",
+      image: "/portfolio-18.jpg",
+      desc: "어린이와 가족 방문객 중심으로 구성된 체험형 시장 축제로, 장보기 콘텐츠와 참여형 프로그램을 운영한 프로젝트",
+      detail: "제 1회 장위 어린이 나들이 장보기 축제는 어린이와 가족 방문객이 전통시장을 더욱 친근하게 경험할 수 있도록 기획된 참여형 행사입니다. 어린이 장보기 체험, 체험 부스 운영, 무대 프로그램, 현장 동선 관리 및 안전 운영까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-18.jpg", "/portfolio-18-2.jpg", "/portfolio-18-3.jpg", "/portfolio-18-4.jpg", "/portfolio-18-5.jpg"],
+    },
+    {
+      id: "jungnang-water-pangpang",
+      title: "중랑구 워터팡팡",
+      tag: "Festival",
+      year: "2025",
+      location: "서울 중랑구",
+      image: "/portfolio-15.jpg",
+      desc: "여름철 가족 단위 방문객을 위한 물놀이형 지역 행사로, 안전 관리와 체험 운영을 통합 진행한 프로젝트",
+      detail: "중랑구 워터팡팡은 여름철 어린이와 가족 방문객을 대상으로 진행된 물놀이형 지역 행사입니다. 물놀이 콘텐츠 운영, 현장 동선 관리, 안전 인력 배치, 안내 운영, 장비 설치 및 철거까지 행사 전반을 안정적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-15.jpg", "/portfolio-15-2.jpg", "/portfolio-15-3.jpg", "/portfolio-15-4.jpg", "/portfolio-15-5.jpg", "/portfolio-15-6.jpg", "/portfolio-15-7.jpg"],
+    },
     {
       id: "jangahn-carrot-market-1",
       title: "제 1회 장안 짤짤이 어린이 당근 마켓",
@@ -114,19 +96,8 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-11.jpg",
       desc: "어린이 참여형 플리마켓 행사로, 체험과 거래 활동을 결합한 교육형 프로그램을 기획·운영한 프로젝트",
       detail: "제 1회 장안 짤짤이 어린이 당근 마켓은 어린이들이 직접 물건을 사고파는 경험을 통해 경제 개념을 자연스럽게 익힐 수 있도록 기획된 참여형 행사입니다. 플리마켓 운영, 체험 프로그램, 현장 동선 설계, 안전 관리, 운영 인력 배치까지 전반적인 행사 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: [
-        "/portfolio-11.jpg",
-        "/portfolio-11-2.jpg",
-        "/portfolio-11-3.jpg",
-        "/portfolio-11-4.jpg",
-        "/portfolio-11-5.jpg",
-        "/portfolio-11-6.jpg",
-        "/portfolio-11-7.jpg",
-        "/portfolio-11-8.jpg",
-        "/portfolio-11-9.jpg",
-        "/portfolio-11-10.jpg",
-      ],
-        },
+      gallery: ["/portfolio-11.jpg", "/portfolio-11-2.jpg", "/portfolio-11-3.jpg", "/portfolio-11-4.jpg", "/portfolio-11-5.jpg", "/portfolio-11-6.jpg", "/portfolio-11-7.jpg", "/portfolio-11-8.jpg", "/portfolio-11-9.jpg", "/portfolio-11-10.jpg"],
+    },
     {
       id: "malcon-market-series",
       title: "1회~6회 말콩달콩 플리마켓 축제",
@@ -136,42 +107,29 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-12.jpg",
       desc: "지역 기반 플리마켓 축제로, 반복 운영을 통해 안정적인 행사 구조와 참여형 콘텐츠를 구축한 프로젝트",
       detail: "1회부터 6회까지 진행된 말콩달콩 플리마켓 축제는 지역 주민과 방문객이 함께 참여하는 지속형 행사로, 셀러 운영, 체험 프로그램, 무대 구성, 현장 동선 설계, 운영 인력 배치 및 안전 관리까지 전반적인 운영을 반복적으로 수행하며 완성도를 높인 프로젝트입니다.",
-      gallery: [
-        "/portfolio-12.jpg",
-        "/portfolio-12-2.jpg",
-        "/portfolio-12-3.jpg",
-        "/portfolio-12-4.jpg",
-        "/portfolio-12-5.jpg",
-        "/portfolio-12-6.jpg",
-        "/portfolio-12-7.jpg",
-        "/portfolio-12-8.jpg",
-        "/portfolio-12-9.jpg",
-        "/portfolio-12-10.jpg",
-        "/portfolio-12-11.jpg",
-      ],
+      gallery: ["/portfolio-12.jpg", "/portfolio-12-2.jpg", "/portfolio-12-3.jpg", "/portfolio-12-4.jpg", "/portfolio-12-5.jpg", "/portfolio-12-6.jpg", "/portfolio-12-7.jpg", "/portfolio-12-8.jpg", "/portfolio-12-9.jpg", "/portfolio-12-10.jpg", "/portfolio-12-11.jpg"],
     },
     {
-      id: "jungnang-green-festival",
-      title: "중랑그린 페스티벌",
+      id: "jisukyoung-health-festival-1",
+      title: "제 1회 지석영 건강축제",
       tag: "Festival",
-      year: "2023",
+      year: "2024",
       location: "서울 중랑구",
-      image: "/portfolio-13.jpg",
-      desc: "친환경 테마로 진행된 지역 축제로, 체험 프로그램과 무대 운영을 통합 기획한 프로젝트",
-      detail: "중랑그린 페스티벌은 친환경과 지역 커뮤니티를 주제로 기획된 행사로, 체험형 프로그램, 친환경 부스, 무대 운영, 현장 동선 설계 및 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: [
-        "/portfolio-13.jpg",
-        "/portfolio-13-2.jpg",
-        "/portfolio-13-3.jpg",
-        "/portfolio-13-4.jpg",
-        "/portfolio-13-5.jpg",
-        "/portfolio-13-6.jpg",
-        "/portfolio-13-7.jpg",
-        "/portfolio-13-8.jpg",
-        "/portfolio-13-9.jpg",
-        "/portfolio-13-10.jpg",
-        "/portfolio-13-11.jpg",
-      ],
+      image: "/portfolio-16.jpg",
+      desc: "지역 주민 참여형 건강 문화 축제로, 건강 체험 프로그램과 현장 운영을 통합 기획한 프로젝트",
+      detail: "제 1회 지석영 건강축제는 지역 주민과 방문객이 함께 참여할 수 있도록 구성된 건강 테마 축제로, 체험 부스 운영, 건강 상담 프로그램, 무대 진행, 현장 동선 관리 및 안전 운영까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-16.jpg", "/portfolio-16-2.jpg", "/portfolio-16-3.jpg", "/portfolio-16-4.jpg", "/portfolio-16-5.jpg"],
+    },
+    {
+      id: "jurak-festival-1",
+      title: "제 1회 주락이 페스티벌",
+      tag: "Festival",
+      year: "2024",
+      location: "서울 성북구",
+      image: "/portfolio-17.jpg",
+      desc: "지역 상권과 야간 문화를 결합한 참여형 축제로, 공연과 체험 콘텐츠 운영을 통합 기획한 프로젝트",
+      detail: "제 1회 주락이 페스티벌은 지역 상권 활성화와 야간 문화 콘텐츠를 결합하여 기획된 참여형 축제로, 먹거리 부스, 체험 프로그램, 무대 공연, 현장 동선 설계 및 운영 인력 배치까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-17.jpg", "/portfolio-17-2.jpg", "/portfolio-17-3.jpg", "/portfolio-17-4.jpg", "/portfolio-17-5.jpg", "/portfolio-17-6.jpg"],
     },
     {
       id: "dongbu-makgeolli-festival-series",
@@ -182,178 +140,64 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-14.jpg",
       desc: "전통시장 활성화를 위한 막걸리 테마 축제로, 먹거리·체험·공연을 결합한 참여형 행사 운영 프로젝트",
       detail: "동부시장 막걸리 축제는 전통시장 활성화를 목적으로 기획된 지역 축제로, 막걸리 시음, 먹거리 부스, 공연 프로그램, 체험 콘텐츠를 결합한 참여형 행사입니다. 현장 동선 설계, 무대 운영, 인력 배치, 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: [
-        "/portfolio-14.jpg",
-        "/portfolio-14-2.jpg",
-        "/portfolio-14-3.jpg",
-        "/portfolio-14-4.jpg",
-        "/portfolio-14-5.jpg",
-        "/portfolio-14-6.jpg",
-        "/portfolio-14-7.jpg",
-        "/portfolio-14-8.jpg",
-        "/portfolio-14-9.jpg",
-        "/portfolio-14-10.jpg",
-      ],
-    }
+      gallery: ["/portfolio-14.jpg", "/portfolio-14-2.jpg", "/portfolio-14-3.jpg", "/portfolio-14-4.jpg", "/portfolio-14-5.jpg", "/portfolio-14-6.jpg", "/portfolio-14-7.jpg", "/portfolio-14-8.jpg", "/portfolio-14-9.jpg", "/portfolio-14-10.jpg"],
+    },
+    {
+      id: "jungnang-green-festival",
+      title: "중랑그린 페스티벌",
+      tag: "Festival",
+      year: "2023",
+      location: "서울 중랑구",
+      image: "/portfolio-13.jpg",
+      desc: "친환경 테마로 진행된 지역 축제로, 체험 프로그램과 무대 운영을 통합 기획한 프로젝트",
+      detail: "중랑그린 페스티벌은 친환경과 지역 커뮤니티를 주제로 기획된 행사로, 체험형 프로그램, 친환경 부스, 무대 운영, 현장 동선 설계 및 안전 관리까지 전반적인 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-13.jpg", "/portfolio-13-2.jpg", "/portfolio-13-3.jpg", "/portfolio-13-4.jpg", "/portfolio-13-5.jpg", "/portfolio-13-6.jpg", "/portfolio-13-7.jpg", "/portfolio-13-8.jpg", "/portfolio-13-9.jpg", "/portfolio-13-10.jpg", "/portfolio-13-11.jpg"],
+    },
+    {
+      id: "cheongpyeong-yeoul-song-festival",
+      title: "제 1~4회 청평 여울 가요제",
+      tag: "Festival",
+      year: "",
+      location: "경기 가평군 청평면",
+      image: "/portfolio-19.jpg",
+      desc: "지역 주민과 관광객이 함께 즐기는 음악 축제로, 무대 공연과 현장 운영을 통합 기획한 프로젝트",
+      detail: "제 1회부터 제 4회까지 진행된 청평 여울 가요제는 지역 문화 활성화와 주민 참여를 중심으로 기획된 음악 축제입니다. 무대 공연 운영, 음향 및 조명 시스템 구성, 현장 동선 설계, 관람객 안내 및 안전 관리까지 전반적인 행사 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-19.jpg", "/portfolio-19-2.jpg", "/portfolio-19-3.jpg", "/portfolio-19-4.jpg", "/portfolio-19-5.jpg"],
+    },
+    {
+      id: "cheongpyeong-yeoul-challenge-festival",
+      title: "청평 여울시장 챌린지 페스티벌",
+      tag: "Festival",
+      year: "",
+      location: "경기 가평군 청평면",
+      image: "/portfolio-20-1.jpg",
+      desc: "시장 활성화를 위한 참여형 프로그램 중심 축제로, 체험 콘텐츠와 현장 운영을 통합 기획한 프로젝트",
+      detail: "청평 여울시장 챌린지 페스티벌은 지역 시장 활성화와 방문객 참여 확대를 목표로 기획된 체험형 행사입니다. 다양한 참여형 미션 프로그램과 현장 이벤트, 운영 동선 설계, 인력 배치 및 안전 관리까지 행사 전반을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-20-1.jpg", "/portfolio-20-2.jpg", "/portfolio-20-3.jpg", "/portfolio-20-4.jpg", "/portfolio-20-5.jpg"],
+    },
+    {
+      id: "cheongpyeong-yeoul-market-festival",
+      title: "청평 여울시장 페스티벌",
+      tag: "Festival",
+      year: "",
+      location: "경기 가평군 청평면",
+      image: "/portfolio-21.jpg",
+      desc: "지역 시장과 문화 콘텐츠를 결합한 축제로, 공연과 체험 프로그램 운영을 통합 진행한 프로젝트",
+      detail: "청평 여울시장 페스티벌은 지역 주민과 관광객이 함께 참여할 수 있도록 기획된 시장 문화 축제입니다. 먹거리 콘텐츠, 공연 프로그램, 체험 이벤트, 현장 운영 동선 설계 및 안전 관리까지 행사 전반을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-21.jpg", "/portfolio-21-2.jpg", "/portfolio-21-3.jpg", "/portfolio-21-4.jpg", "/portfolio-21-5.jpg"],
+    },
+    {
+      id: "dongbu-infant-market-festival",
+      title: "동부시장 영유아 시장 장보기 축제",
+      tag: "Festival",
+      year: "2024",
+      location: "서울 중랑구",
+      image: "/portfolio-22.jpg",
+      desc: "영유아와 가족 방문객을 위한 참여형 시장 체험 축제로, 장보기 콘텐츠와 현장 체험 프로그램을 운영한 프로젝트",
+      detail: "동부시장 영유아 시장 장보기 축제는 영유아와 가족 방문객이 전통시장을 친근하게 체험할 수 있도록 기획된 참여형 행사입니다. 어린이 장보기 체험, 가족 참여 프로그램, 현장 동선 설계, 체험 부스 운영 및 안전 관리까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: ["/portfolio-22.jpg", "/portfolio-22-2.jpg", "/portfolio-22-3.jpg", "/portfolio-22-4.jpg", "/portfolio-22-5.jpg", "/portfolio-22-6.jpg", "/portfolio-22-7.jpg"],
+    },
   ]
-
-  const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [lightboxImage, setLightboxImage] = useState(null)
-  const [heroIndex, setHeroIndex] = useState(0)
-  const portfolioDetailRef = useRef(null)
-  const portfolioListRef = useRef(null)
-  const portfolioGalleryRef = useRef(null)
-
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    project: "",
-    type: "",
-    message: "",
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setForm((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-
-    const subject = encodeURIComponent(`[문의] ${form.project || "프로젝트 문의"}`)
-    const body = encodeURIComponent(
-      `담당자명: ${form.name}
-연락처: ${form.phone}
-이메일: ${form.email}
-문의유형: ${form.type}
-
-내용:
-${form.message}`
-    )
-
-    const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"
-    const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"
-    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"
-
-    const isEmailJsConfigured =
-      EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY" &&
-      EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID" &&
-      EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID"
-
-    if (!isEmailJsConfigured) {
-      window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
-      return
-    }
-
-    try {
-      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: EMAILJS_SERVICE_ID,
-          template_id: EMAILJS_TEMPLATE_ID,
-          user_id: EMAILJS_PUBLIC_KEY,
-          template_params: {
-            user_name: form.name,
-            user_phone: form.phone,
-            user_email: form.email,
-            project_name: form.project,
-            inquiry_type: form.type,
-            message: form.message,
-          },
-        }),
-      })
-
-      if (!response.ok) {
-        throw new Error("EmailJS 전송 실패")
-      }
-
-      alert("문의가 전송되었습니다.")
-      setForm({
-        name: "",
-        phone: "",
-        email: "",
-        project: "",
-        type: "",
-        message: "",
-      })
-    } catch (error) {
-      window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
-    }
-  }
-
-  const sortedPortfolio = useMemo(() => {
-    return [...portfolio].sort((a, b) => Number(b.year) - Number(a.year))
-  }, [portfolio])
-
-  const featuredPortfolio = useMemo(() => sortedPortfolio.slice(0, 3), [sortedPortfolio])
-
-  const selectedPortfolio = useMemo(
-    () => sortedPortfolio.find((item) => item.id === selectedPortfolioId) ?? sortedPortfolio[0],
-    [sortedPortfolio, selectedPortfolioId]
-  )
-
-  const handlePortfolioSelect = (id) => {
-    setSelectedPortfolioId(id)
-    setMobileMenuOpen(false)
-
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        portfolioDetailRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-      }, 120)
-    })
-  }
-
-  const handleGalleryMove = (direction) => {
-    const container = portfolioGalleryRef.current
-    if (!container) return
-
-    const scrollAmount = Math.max(container.clientWidth * 0.75, 260)
-    container.scrollBy({
-      left: direction === "next" ? scrollAmount : -scrollAmount,
-      behavior: "smooth",
-    })
-  }
-
-  const handlePortfolioListMove = (direction) => {
-    const container = portfolioListRef.current
-    if (!container) return
-
-    const scrollAmount = Math.max(container.clientWidth * 0.82, 300)
-    container.scrollBy({
-      left: direction === "next" ? scrollAmount : -scrollAmount,
-      behavior: "smooth",
-    })
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setMobileMenuOpen(false)
-      }
-    }
-
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  
-  useEffect(() => {
-    if (!featuredPortfolio.length) return
-
-    const interval = window.setInterval(() => {
-      setHeroIndex((prev) => (prev + 1) % featuredPortfolio.length)
-    }, 3500)
-
-    return () => window.clearInterval(interval)
-  }, [featuredPortfolio])
 
   const rentals = [
     {
@@ -388,20 +232,89 @@ ${form.message}`
     },
   ]
 
+  const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState(null)
+  const [heroIndex, setHeroIndex] = useState(0)
+  const portfolioDetailRef = useRef(null)
+  const portfolioListRef = useRef(null)
+  const portfolioGalleryRef = useRef(null)
+
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    project: "",
+    type: "",
+    message: "",
+  })
+
+  const sortedPortfolio = useMemo(() => {
+    return [...portfolio].sort((a, b) => Number(b.year || 0) - Number(a.year || 0))
+  }, [])
+
+  const featuredPortfolio = useMemo(() => sortedPortfolio.slice(0, 3), [sortedPortfolio])
+
+  const selectedPortfolio = useMemo(() => {
+    return sortedPortfolio.find((item) => item.id === selectedPortfolioId) ?? sortedPortfolio[0]
+  }, [sortedPortfolio, selectedPortfolioId])
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const subject = encodeURIComponent(`[문의] ${form.project || "프로젝트 문의"}`)
+    const body = encodeURIComponent(`담당자명: ${form.name}
+연락처: ${form.phone}
+이메일: ${form.email}
+문의유형: ${form.type}
+
+내용:
+${form.message}`)
+    window.location.href = `mailto:kimset11@naver.com?subject=${subject}&body=${body}`
+  }
+
+  const handlePortfolioSelect = (id) => {
+    setSelectedPortfolioId(id)
+    setMobileMenuOpen(false)
+    setTimeout(() => {
+      portfolioDetailRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+    }, 120)
+  }
+
+  const moveHorizontal = (ref, direction, ratio = 0.75, min = 260) => {
+    const container = ref.current
+    if (!container) return
+    const amount = Math.max(container.clientWidth * ratio, min)
+    container.scrollBy({ left: direction === "next" ? amount : -amount, behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setMobileMenuOpen(false)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  useEffect(() => {
+    if (!featuredPortfolio.length) return
+    const interval = window.setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % featuredPortfolio.length)
+    }, 3500)
+    return () => window.clearInterval(interval)
+  }, [featuredPortfolio])
+
   return (
     <div className="min-h-screen bg-white text-zinc-900">
       <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-4">
             <div className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-zinc-200">
-              <img
-                src="/logo.png"
-                alt="KIMS logo"
-                className="h-12 w-auto object-contain shrink-0 brightness-0 contrast-200 sm:h-16"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                }}
-              />
+              <img src="/logo.png" alt="KIMS logo" className="h-12 w-auto shrink-0 object-contain brightness-0 contrast-200 sm:h-16" />
             </div>
             <div>
               <p className="text-sm font-bold tracking-tight sm:text-xl">킴스기획 KIMS entertainment</p>
@@ -415,23 +328,18 @@ ${form.message}`
             <a href="#rental" className="hover:text-zinc-600">렌탈</a>
             <a href="#contact" className="hover:text-zinc-600">문의</a>
           </nav>
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-xl border px-3 py-2 text-sm font-semibold md:hidden"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            aria-label="모바일 메뉴 열기"
-          >
+          <button type="button" className="rounded-xl border px-3 py-2 text-sm font-semibold md:hidden" onClick={() => setMobileMenuOpen((prev) => !prev)}>
             {mobileMenuOpen ? "닫기" : "메뉴"}
           </button>
         </div>
         {mobileMenuOpen && (
           <div className="border-t bg-white md:hidden">
             <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 text-sm font-semibold sm:px-6">
-              <a href="#about" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">회사소개</a>
-              <a href="#services" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">사업영역</a>
-              <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">포트폴리오</a>
-              <a href="#rental" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">렌탈</a>
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">문의</a>
+              {["about", "services", "portfolio", "rental", "contact"].map((id) => (
+                <a key={id} href={`#${id}`} onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">
+                  {id === "about" ? "회사소개" : id === "services" ? "사업영역" : id === "portfolio" ? "포트폴리오" : id === "rental" ? "렌탈" : "문의"}
+                </a>
+              ))}
             </div>
           </div>
         )}
@@ -441,76 +349,35 @@ ${form.message}`
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-[0.95fr_1.05fr] md:gap-10 md:py-24">
           <div className="flex flex-col justify-center">
             <p className="mb-3 text-sm uppercase tracking-[0.25em] text-zinc-400">Event & Festival Agency</p>
-            <h1 className="max-w-[7.5em] text-[2.6rem] font-black leading-[0.95] sm:max-w-none sm:text-5xl md:text-6xl">
-              행사와 축제를
-              <br />
-              가장 현장답게 만듭니다
-            </h1>
+            <h1 className="max-w-[7.5em] text-[2.6rem] font-black leading-[0.95] sm:max-w-none sm:text-5xl md:text-6xl">행사와 축제를<br />가장 현장답게 만듭니다</h1>
             <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-300 sm:text-base md:text-lg">
               킴스기획(KIMS entertainment)은 기획, 연출, 운영, 장비 렌탈, 영상 제작까지 전 과정을 통합적으로 수행하는 행사·축제 전문 대행사입니다.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">
-                프로젝트 문의하기
-              </a>
-              <a href="#portfolio" className="rounded-2xl border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">
-                포트폴리오 보기
-              </a>
+              <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">프로젝트 문의하기</a>
+              <a href="#portfolio" className="rounded-2xl border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">포트폴리오 보기</a>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
             {featuredPortfolio.map((item, index) => (
-              <div
-                key={item.id}
-                className={`absolute inset-0 transition-all duration-700 ${index === heroIndex ? "opacity-100" : "pointer-events-none opacity-0"}`}
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
+              <div key={item.id} className={`absolute inset-0 transition-all duration-700 ${index === heroIndex ? "opacity-100" : "pointer-events-none opacity-0"}`}>
+                <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
               </div>
             ))}
-
             <div className="relative flex min-h-[360px] flex-col justify-end p-6 sm:min-h-[420px] sm:p-8">
               <div className="max-w-md rounded-3xl bg-black/20 p-5 backdrop-blur-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-300">Featured Portfolio</p>
                 <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{featuredPortfolio[heroIndex]?.title}</h2>
                 <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-full bg-white/15 px-3 py-1 font-semibold text-white">{featuredPortfolio[heroIndex]?.year}</span>
+                  {featuredPortfolio[heroIndex]?.year && <span className="rounded-full bg-white/15 px-3 py-1 font-semibold text-white">{featuredPortfolio[heroIndex]?.year}</span>}
                   <span className="rounded-full bg-white/15 px-3 py-1 font-semibold text-zinc-100">{featuredPortfolio[heroIndex]?.location}</span>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-zinc-100">{featuredPortfolio[heroIndex]?.desc}</p>
-                <button
-                  type="button"
-                  onClick={() => handlePortfolioSelect(featuredPortfolio[heroIndex]?.id)}
-                  className="mt-5 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-zinc-950"
-                >
-                  대표 프로젝트 보기
-                </button>
+                <button type="button" onClick={() => handlePortfolioSelect(featuredPortfolio[heroIndex]?.id)} className="mt-5 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-zinc-950">대표 프로젝트 보기</button>
               </div>
-
-              <button
-                type="button"
-                onClick={() => setHeroIndex((prev) => (prev - 1 + featuredPortfolio.length) % featuredPortfolio.length)}
-                className="absolute left-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-lg text-white backdrop-blur-sm transition hover:bg-black/50 sm:left-5 sm:h-12 sm:w-12"
-                aria-label="이전 대표 프로젝트"
-              >
-                ‹
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setHeroIndex((prev) => (prev + 1) % featuredPortfolio.length)}
-                className="absolute right-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-lg text-white backdrop-blur-sm transition hover:bg-black/50 sm:right-5 sm:h-12 sm:w-12"
-                aria-label="다음 대표 프로젝트"
-              >
-                ›
-              </button>
+              <button type="button" onClick={() => setHeroIndex((prev) => (prev - 1 + featuredPortfolio.length) % featuredPortfolio.length)} className="absolute left-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-lg text-white backdrop-blur-sm transition hover:bg-black/50 sm:left-5 sm:h-12 sm:w-12">‹</button>
+              <button type="button" onClick={() => setHeroIndex((prev) => (prev + 1) % featuredPortfolio.length)} className="absolute right-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-lg text-white backdrop-blur-sm transition hover:bg-black/50 sm:right-5 sm:h-12 sm:w-12">›</button>
             </div>
           </div>
         </div>
@@ -521,66 +388,40 @@ ${form.message}`
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">About</p>
             <h2 className="mt-3 whitespace-nowrap text-2xl font-bold leading-tight sm:text-3xl md:text-3xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
-            <p className="mt-6 text-base leading-8 text-zinc-600">
-              킴스기획(KIMS entertainment)은 단순한 행사 진행을 넘어, 현장의 목적과 분위기를 종합적으로 설계하는 전문 기획팀입니다.
-              클라이언트의 목표에 부합하는 기획안 수립부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 전 과정을 통합적으로 제공합니다.
-            </p>
+            <p className="mt-6 text-base leading-8 text-zinc-600">킴스기획(KIMS entertainment)은 단순한 행사 진행을 넘어, 현장의 목적과 분위기를 종합적으로 설계하는 전문 기획팀입니다. 클라이언트의 목표에 부합하는 기획안 수립부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 전 과정을 통합적으로 제공합니다.</p>
             <div className="mt-8 rounded-[2rem] border bg-zinc-950 p-6 text-white shadow-xl sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Core Message</p>
-              <p className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
-                현장을 정확히 이해하는 기획이
-                <br />
-                행사의 완성도를 결정합니다.
-              </p>
-              <p className="mt-4 text-sm leading-7 text-zinc-300">
-                기획, 운영, 렌탈, 콘텐츠 제작을 하나의 팀에서 유기적으로 수행하며, 일정·예산·현장 상황을 고려한 실무 중심의 솔루션을 제공합니다.
-              </p>
+              <p className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">현장을 정확히 이해하는 기획이<br />행사의 완성도를 결정합니다.</p>
+              <p className="mt-4 text-sm leading-7 text-zinc-300">기획, 운영, 렌탈, 콘텐츠 제작을 하나의 팀에서 유기적으로 수행하며, 일정·예산·현장 상황을 고려한 실무 중심의 솔루션을 제공합니다.</p>
             </div>
           </div>
-
           <div className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-3xl border bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">Festival</p>
-                <p className="mt-2 text-sm text-zinc-500">지역 축제 · 문화 행사</p>
-              </div>
-              <div className="rounded-3xl border bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">Event</p>
-                <p className="mt-2 text-sm text-zinc-500">기업 행사 · 프로모션</p>
-              </div>
-              <div className="rounded-3xl border bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">Rental</p>
-                <p className="mt-2 text-sm text-zinc-500">무대 · 음향 · 조명</p>
-              </div>
-              <div className="rounded-3xl border bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">Video</p>
-                <p className="mt-2 text-sm text-zinc-500">스케치 · 홍보 콘텐츠</p>
-              </div>
+              {["Festival|지역 축제 · 문화 행사", "Event|기업 행사 · 프로모션", "Rental|무대 · 음향 · 조명", "Video|스케치 · 홍보 콘텐츠"].map((text) => {
+                const [title, desc] = text.split("|")
+                return (
+                  <div key={title} className="rounded-3xl border bg-white p-6 shadow-sm">
+                    <p className="text-3xl font-black text-zinc-950">{title}</p>
+                    <p className="mt-2 text-sm text-zinc-500">{desc}</p>
+                  </div>
+                )
+              })}
             </div>
-
             <div className="rounded-3xl border bg-zinc-50 p-6 shadow-sm sm:p-8">
               <p className="text-lg font-bold">진행 프로세스</p>
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">01</p>
-                  <p className="mt-2 font-bold">기획 및 구성</p>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">행사 목적, 예산, 타깃에 맞춘 실무형 기획안을 제안합니다.</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">02</p>
-                  <p className="mt-2 font-bold">현장 설계</p>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">동선, 무대, 장비, 운영 인력까지 현장 중심으로 설계합니다.</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">03</p>
-                  <p className="mt-2 font-bold">운영 및 대응</p>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">행사 당일 진행, 안전 관리, 돌발 상황 대응까지 안정적으로 운영합니다.</p>
-                </div>
-                <div className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">04</p>
-                  <p className="mt-2 font-bold">기록 및 확장</p>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">스케치 영상, 사진, 홍보 콘텐츠로 행사 이후 활용도까지 높입니다.</p>
-                </div>
+                {[
+                  ["01", "기획 및 구성", "행사 목적, 예산, 타깃에 맞춘 실무형 기획안을 제안합니다."],
+                  ["02", "현장 설계", "동선, 무대, 장비, 운영 인력까지 현장 중심으로 설계합니다."],
+                  ["03", "운영 및 대응", "행사 당일 진행, 안전 관리, 돌발 상황 대응까지 안정적으로 운영합니다."],
+                  ["04", "기록 및 확장", "스케치 영상, 사진, 홍보 콘텐츠로 행사 이후 활용도까지 높입니다."],
+                ].map(([num, title, desc]) => (
+                  <div key={num} className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
+                    <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">{num}</p>
+                    <p className="mt-2 font-bold">{title}</p>
+                    <p className="mt-2 text-sm leading-6 text-zinc-600">{desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -609,69 +450,32 @@ ${form.message}`
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Portfolio</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">주요 프로젝트</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600">
-              킴스기획(KIMS entertainment)이 진행한 행사와 축제 운영 사례를 한눈에 볼 수 있도록 정리한 포트폴리오입니다.
-            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600">킴스기획(KIMS entertainment)이 진행한 행사와 축제 운영 사례를 한눈에 볼 수 있도록 정리한 포트폴리오입니다.</p>
           </div>
           <a href="#contact" className="rounded-2xl border px-4 py-2 text-sm font-semibold hover:bg-zinc-50">견적 문의</a>
         </div>
 
         <div className="relative mt-6">
-          <button
-            type="button"
-            onClick={() => handlePortfolioListMove("prev")}
-            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:left-4 sm:h-12 sm:w-12"
-            aria-label="이전 포트폴리오 보기"
-          >
-            ‹
-          </button>
-
-          <button
-            type="button"
-            onClick={() => handlePortfolioListMove("next")}
-            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:right-4 sm:h-12 sm:w-12"
-            aria-label="다음 포트폴리오 보기"
-          >
-            ›
-          </button>
-
+          <button type="button" onClick={() => moveHorizontal(portfolioListRef, "prev", 0.82, 300)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:left-4 sm:h-12 sm:w-12">‹</button>
+          <button type="button" onClick={() => moveHorizontal(portfolioListRef, "next", 0.82, 300)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:right-4 sm:h-12 sm:w-12">›</button>
           <div ref={portfolioListRef} className="flex gap-6 overflow-x-hidden px-12 pb-3 sm:px-16">
-          {sortedPortfolio.map((item) => (
-            <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:min-w-[320px] sm:max-w-[320px]">
-              <div className="relative h-64 overflow-hidden bg-zinc-200">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full cursor-pointer object-cover"
-                  onClick={() => setLightboxImage(item.image)}
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                    const next = e.currentTarget.nextElementSibling
-                    if (next) next.classList.remove('hidden')
-                  }}
-                />
-                <div className="hidden h-full w-full items-center justify-center bg-zinc-100 text-sm text-zinc-500">
-                  포트폴리오 사진 준비중
+            {sortedPortfolio.map((item) => (
+              <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:min-w-[320px] sm:max-w-[320px]">
+                <div className="relative h-64 overflow-hidden bg-zinc-200">
+                  <img src={item.image} alt={item.title} className="h-full w-full cursor-pointer object-cover" onClick={() => setLightboxImage(item.image)} />
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-700">{item.tag}</span>
-                  <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-500">{item.year}</span>
-                  <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-500">{item.location}</span>
+                <div className="p-6">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-700">{item.tag}</span>
+                    {item.year && <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-500">{item.year}</span>}
+                    <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-500">{item.location}</span>
+                  </div>
+                  <h3 className="mt-4 text-xl font-bold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.desc}</p>
+                  <button type="button" onClick={() => handlePortfolioSelect(item.id)} className="mt-5 rounded-2xl bg-zinc-950 px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90">상세보기</button>
                 </div>
-                <h3 className="mt-4 text-xl font-bold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-zinc-600">{item.desc}</p>
-                <button
-                  type="button"
-                  onClick={() => handlePortfolioSelect(item.id)}
-                  className="mt-5 rounded-2xl bg-zinc-950 px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-                >
-                  상세보기
-                </button>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
           </div>
         </div>
 
@@ -682,55 +486,24 @@ ${form.message}`
               <h3 className="mt-3 text-2xl font-bold md:text-3xl">{selectedPortfolio?.title}</h3>
               <div className="mt-4 flex flex-wrap gap-2 text-xs">
                 <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{selectedPortfolio?.tag}</span>
-                <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{selectedPortfolio?.year}</span>
+                {selectedPortfolio?.year && <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{selectedPortfolio?.year}</span>}
                 <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">{selectedPortfolio?.location}</span>
               </div>
             </div>
             <a href="#contact" className="rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-zinc-950">이 프로젝트 문의하기</a>
           </div>
-
           <p className="mt-6 max-w-3xl text-sm leading-7 text-zinc-300">{selectedPortfolio?.detail}</p>
-
           <div className="relative mt-8">
-            <button
-              type="button"
-              onClick={() => handleGalleryMove("prev")}
-              className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:left-4 sm:h-12 sm:w-12"
-              aria-label="이전 사진 보기"
-            >
-              ‹
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleGalleryMove("next")}
-              className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:right-4 sm:h-12 sm:w-12"
-              aria-label="다음 사진 보기"
-            >
-              ›
-            </button>
-
+            <button type="button" onClick={() => moveHorizontal(portfolioGalleryRef, "prev", 0.75, 260)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:left-4 sm:h-12 sm:w-12">‹</button>
+            <button type="button" onClick={() => moveHorizontal(portfolioGalleryRef, "next", 0.75, 260)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:right-4 sm:h-12 sm:w-12">›</button>
             <div ref={portfolioGalleryRef} className="flex gap-4 overflow-x-hidden px-12 pb-2 sm:px-16">
-            {selectedPortfolio?.gallery.map((image, index) => (
-              <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
-                <div className="h-56 bg-zinc-800 sm:h-64">
-                  <img
-                    src={image}
-                    alt={`${selectedPortfolio?.title} 사진 ${index + 1}`}
-                    className="h-full w-full cursor-pointer object-cover"
-                    onClick={() => setLightboxImage(image)}
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      const next = e.currentTarget.nextElementSibling
-                      if (next) next.classList.remove('hidden')
-                    }}
-                  />
-                  <div className="hidden h-full w-full items-center justify-center bg-zinc-900 text-sm text-zinc-400">
-                    상세 사진 준비중
+              {selectedPortfolio?.gallery.map((image, index) => (
+                <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
+                  <div className="h-56 bg-zinc-800 sm:h-64">
+                    <img src={image} alt={`${selectedPortfolio?.title} 사진 ${index + 1}`} className="h-full w-full cursor-pointer object-cover" onClick={() => setLightboxImage(image)} />
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
             </div>
           </div>
         </div>
@@ -741,28 +514,19 @@ ${form.message}`
           <div className="mb-12 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Rental</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">장비 렌탈 서비스</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-300">
-              무대, 음향, 조명, 영상 장비를 행사 규모와 목적에 최적화하여 구성하고, 설치부터 운영까지 원스톱으로 지원합니다.
-            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-300">무대, 음향, 조명, 영상 장비를 행사 규모와 목적에 최적화하여 구성하고, 설치부터 운영까지 원스톱으로 지원합니다.</p>
           </div>
-
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {rentals.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm transition hover:bg-white/10"
-              >
+              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm transition hover:bg-white/10">
                 <h3 className="text-xl font-bold">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">{item.desc}</p>
                 <ul className="mt-4 space-y-1 text-xs text-zinc-400">
-                  {item.points.map((p) => (
-                    <li key={p}>• {p}</li>
-                  ))}
+                  {item.points.map((p) => <li key={p}>• {p}</li>)}
                 </ul>
               </div>
             ))}
           </div>
-
           <div className="mt-12 rounded-3xl bg-white p-6 text-zinc-900 shadow-lg sm:p-8">
             <h3 className="text-xl font-bold">운영 지원 범위</h3>
             <div className="mt-4 grid gap-4 text-sm sm:grid-cols-3">
@@ -770,20 +534,9 @@ ${form.message}`
               <div>• 행사 규모·목적 기반 장비 구성 컨설팅</div>
               <div>• 운영 인력 및 오퍼레이터 배치</div>
             </div>
-
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="tel:01076040025"
-                className="flex-1 rounded-2xl bg-zinc-950 px-5 py-3 text-center font-semibold text-white"
-              >
-                전화 문의
-              </a>
-              <a
-                href="#contact"
-                className="flex-1 rounded-2xl border border-zinc-300 px-5 py-3 text-center font-semibold"
-              >
-                빠른 견적 요청
-              </a>
+              <a href="tel:01076040025" className="flex-1 rounded-2xl bg-zinc-950 px-5 py-3 text-center font-semibold text-white">전화 문의</a>
+              <a href="#contact" className="flex-1 rounded-2xl border border-zinc-300 px-5 py-3 text-center font-semibold">빠른 견적 요청</a>
             </div>
           </div>
         </div>
@@ -794,16 +547,13 @@ ${form.message}`
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의 메일 작성</h2>
-            <p className="mt-5 text-base leading-8 text-zinc-600">
-              필요한 내용을 작성하시면 문의가 전송되며, 자동 전송이 설정되지 않은 경우 이메일 작성 화면으로 연결됩니다.
-            </p>
+            <p className="mt-5 text-base leading-8 text-zinc-600">필요한 내용을 작성하시면 문의가 전송되며, 자동 전송이 설정되지 않은 경우 이메일 작성 화면으로 연결됩니다.</p>
             <div className="mt-8 space-y-3 text-sm text-zinc-700">
               <p><span className="font-semibold">Tel.</span> 010-7604-0025</p>
               <p><span className="font-semibold">E-mail.</span> kimset11@naver.com</p>
               <p><span className="font-semibold">Fax.</span> 0504-376-0025</p>
               <p><span className="font-semibold">Kakao.</span> Kims-ent</p>
               <p><span className="font-semibold">사업자번호.</span> 830-06-03074</p>
-
             </div>
           </div>
           <form onSubmit={handleSubmit} className="rounded-3xl border bg-zinc-50 p-5 shadow-sm sm:p-6">
@@ -821,9 +571,7 @@ ${form.message}`
               </select>
               <textarea name="message" value={form.message} onChange={handleChange} className="min-h-[160px] rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사 일정, 장소, 예산, 필요한 서비스 등을 적어주세요" />
             </div>
-            <button type="submit" className="mt-5 w-full rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">
-              이메일로 문의하기
-            </button>
+            <button type="submit" className="mt-5 w-full rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">이메일로 문의하기</button>
           </form>
         </div>
       </section>
@@ -839,15 +587,8 @@ ${form.message}`
       </footer>
 
       {lightboxImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setLightboxImage(null)}
-        >
-          <img
-            src={lightboxImage}
-            alt="확대 이미지"
-            className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl"
-          />
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4" onClick={() => setLightboxImage(null)}>
+          <img src={lightboxImage} alt="확대 이미지" className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl" />
         </div>
       )}
     </div>
