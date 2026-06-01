@@ -129,7 +129,7 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-17.jpg",
       desc: "지역 상권과 야간 문화를 결합한 참여형 축제로, 공연과 체험 콘텐츠 운영을 통합 기획한 프로젝트",
       detail: "제 1회 주락이 페스티벌은 지역 상권 활성화와 야간 문화 콘텐츠를 결합하여 기획된 참여형 축제로, 먹거리 부스, 체험 프로그램, 무대 공연, 현장 동선 설계 및 운영 인력 배치까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: ["/portfolio-17.jpg", "/portfolio-17-2.jpg", "/portfolio-17-3.jpg", "/portfolio-17-4.jpg", "/portfolio-17-5.jpg", "/portfolio-17-6.jpg"],
+      gallery: ["/portfolio-17.jpg", "/portfolio-17-2.jpg", "/portfolio-17-3.jpg", "/portfolio-17-4.jpg", "/portfolio-17-5.jpg", "/portfolio-17-6.jpg", "/portfolio-17-7.jpg"],
     },
     {
       id: "dongbu-makgeolli-festival-series",
@@ -195,7 +195,31 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-22.jpg",
       desc: "영유아와 가족 방문객을 위한 참여형 시장 체험 축제로, 장보기 콘텐츠와 현장 체험 프로그램을 운영한 프로젝트",
       detail: "동부시장 영유아 시장 장보기 축제는 영유아와 가족 방문객이 전통시장을 친근하게 체험할 수 있도록 기획된 참여형 행사입니다. 어린이 장보기 체험, 가족 참여 프로그램, 현장 동선 설계, 체험 부스 운영 및 안전 관리까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: ["/portfolio-22.jpg", "/portfolio-22-2.jpg", "/portfolio-22-3.jpg", "/portfolio-22-4.jpg", "/portfolio-22-5.jpg", "/portfolio-22-6.jpg", "/portfolio-22-7.jpg"],
+      gallery: ["/portfolio-22.jpg", "/portfolio-22-2.jpg", "/portfolio-22-3.jpg", "/portfolio-22-4.jpg", "/portfolio-22-5.jpg", "/portfolio-22-6.jpg", "/portfolio-22-7.jpg", "/portfolio-22-8.jpg", "/portfolio-22-9.jpg"],
+    },
+    {
+      id: "jangandong-carrot-market-2",
+      title: "제2회 장안동 짤짤이 어린이 당근마켓",
+      tag: "Festival",
+      year: "2026",
+      location: "서울 동대문구",
+      image: "/portfolio-23.jpg",
+      desc: "어린이들이 직접 참여하는 경제 체험형 축제로, 중고 물품 거래와 체험 프로그램을 결합한 가족 참여형 행사 프로젝트",
+      detail: "제2회 장안동 짤짤이 어린이 당근마켓은 어린이들이 직접 판매자와 구매자가 되어 경제 활동을 체험할 수 있도록 기획된 참여형 축제입니다. 어린이 플리마켓, 체험 프로그램, 가족 참여 이벤트, 무대 공연, 현장 동선 관리 및 안전 운영까지 전반적인 행사 운영을 통합적으로 수행한 프로젝트입니다. 행사일은 2026년 5월 31일입니다.",
+      gallery: [
+        "/portfolio-23.jpg",
+        "/portfolio-23-2.jpg",
+        "/portfolio-23-3.jpg",
+        { type: "video", src: "/videos/portfolio-23-video.mp4" },
+        "/portfolio-23-4.jpg",
+        "/portfolio-23-5.jpg",
+        "/portfolio-23-6.jpg",
+        "/portfolio-23-7.jpg",
+        "/portfolio-23-8.jpg",
+        "/portfolio-23-9.jpg",
+        "/portfolio-23-10.jpg",
+        "/portfolio-23-11.jpg",
+      ],
     },
   ]
 
@@ -497,13 +521,32 @@ ${form.message}`)
             <button type="button" onClick={() => moveHorizontal(portfolioGalleryRef, "prev", 0.75, 260)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:left-4 sm:h-12 sm:w-12">‹</button>
             <button type="button" onClick={() => moveHorizontal(portfolioGalleryRef, "next", 0.75, 260)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:right-4 sm:h-12 sm:w-12">›</button>
             <div ref={portfolioGalleryRef} className="flex gap-4 overflow-x-hidden px-12 pb-2 sm:px-16">
-              {selectedPortfolio?.gallery.map((image, index) => (
-                <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
-                  <div className="h-56 bg-zinc-800 sm:h-64">
-                    <img src={image} alt={`${selectedPortfolio?.title} 사진 ${index + 1}`} className="h-full w-full cursor-pointer object-cover" onClick={() => setLightboxImage(image)} />
+              {selectedPortfolio?.gallery.map((item, index) => {
+                const key = typeof item === "string" ? item : item.src
+                return (
+                  <div key={key} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
+                    <div className="h-56 bg-zinc-800 sm:h-64">
+                      {typeof item === "string" ? (
+                        <img
+                          src={item}
+                          alt={`${selectedPortfolio?.title} 사진 ${index + 1}`}
+                          className="h-full w-full cursor-pointer object-cover"
+                          onClick={() => setLightboxImage(item)}
+                        />
+                      ) : (
+                        <video
+                          controls
+                          playsInline
+                          className="h-full w-full object-cover"
+                          poster={selectedPortfolio?.image}
+                        >
+                          <source src={item.src} type="video/mp4" />
+                        </video>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
