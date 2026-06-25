@@ -56,7 +56,7 @@ export default function FestivalAgencySiteMockup() {
     },
     {
       id: "jurak-festival-series",
-      title: "제 2회, 제 3회 주락이 페스티벌",
+      title: "제 2회·제 3회 주락이 페스티벌",
       tag: "Festival",
       year: "2025",
       location: "서울 성북구",
@@ -66,15 +66,32 @@ export default function FestivalAgencySiteMockup() {
       gallery: ["/portfolio-10.jpg", "/portfolio-10-2.jpg", "/portfolio-10-3.jpg", "/portfolio-10-4.jpg", "/portfolio-10-5.jpg", "/portfolio-10-6.jpg", "/portfolio-10-7.jpg"],
     },
     {
-      id: "jangwi-kids-market-festival-1",
-      title: "제 1회 장위 어린이 나들이 장보기 축제",
+      id: "jurak-festival-4",
+      title: "제 4회 주락이 페스티벌",
       tag: "Festival",
-      year: "2025",
+      year: "2026",
       location: "서울 성북구",
-      image: "/portfolio-18.jpg",
-      desc: "어린이와 가족 방문객 중심으로 구성된 체험형 시장 축제로, 장보기 콘텐츠와 참여형 프로그램을 운영한 프로젝트",
-      detail: "제 1회 장위 어린이 나들이 장보기 축제는 어린이와 가족 방문객이 전통시장을 더욱 친근하게 경험할 수 있도록 기획된 참여형 행사입니다. 어린이 장보기 체험, 체험 부스 운영, 무대 프로그램, 현장 동선 관리 및 안전 운영까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: ["/portfolio-18.jpg", "/portfolio-18-2.jpg", "/portfolio-18-3.jpg", "/portfolio-18-4.jpg", "/portfolio-18-5.jpg"],
+      image: "/jurak4-main.jpg",
+      desc: "2026년 6월 20일 서울 성북구에서 열린 별도 축제로, 현장 운영과 프로그램 연출을 통합 기획한 프로젝트",
+      detail: "제 4회 주락이 페스티벌은 2026년 6월 20일 서울 성북구에서 개최된 별도의 참여형 지역 축제로, 체험 부스 운영, 무대 프로그램, 현장 동선 설계, 운영 인력 배치와 안전 관리까지 전반적인 행사 운영을 통합적으로 수행한 프로젝트입니다.",
+      gallery: [
+        "/jurak4-main.jpg",
+        "/jurak4-detail-01.jpg",
+        "/jurak4-detail-02.jpg",
+        "/jurak4-detail-03.jpg",
+        "/jurak4-detail-04.jpg",
+        "/jurak4-detail-05.jpg",
+        "/jurak4-detail-06.jpg",
+        "/jurak4-detail-07.jpg",
+        "/jurak4-detail-08.jpg",
+        "/jurak4-detail-09.jpg",                                                                                                                                                                                                                                          
+        "/jurak4-detail-10.jpg",
+        "/jurak4-detail-11.jpg",
+        "/jurak4-detail-12.jpg",
+        "/jurak4-detail-13.jpg",
+        "/jurak4-detail-14.jpg",
+        "/jurak4-detail-15.jpg",
+      ],
     },
     {
       id: "jungnang-water-pangpang",
@@ -85,7 +102,18 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-15.jpg",
       desc: "여름철 가족 단위 방문객을 위한 물놀이형 지역 행사로, 안전 관리와 체험 운영을 통합 진행한 프로젝트",
       detail: "중랑구 워터팡팡은 여름철 어린이와 가족 방문객을 대상으로 진행된 물놀이형 지역 행사입니다. 물놀이 콘텐츠 운영, 현장 동선 관리, 안전 인력 배치, 안내 운영, 장비 설치 및 철거까지 행사 전반을 안정적으로 수행한 프로젝트입니다.",
-      gallery: ["/portfolio-15.jpg", "/portfolio-15-2.jpg", "/portfolio-15-3.jpg", "/portfolio-15-4.jpg", "/portfolio-15-5.jpg", "/portfolio-15-6.jpg", "/portfolio-15-7.jpg"],
+      gallery: [
+        "/portfolio-15.jpg",
+        "/portfolio-15-2.jpg",
+        "/portfolio-15-3.jpg",
+        "/portfolio-15-4.jpg",
+        "/portfolio-15-5.jpg",
+        "/portfolio-15-6.jpg",
+        "/portfolio-15-7.jpg",
+        "/portfolio-15-8.jpg",
+        "/portfolio-15-9.jpg",
+        "/portfolio-15-10.jpg",
+      ],
     },
     {
       id: "jangahn-carrot-market-1",
@@ -129,7 +157,7 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-17.jpg",
       desc: "지역 상권과 야간 문화를 결합한 참여형 축제로, 공연과 체험 콘텐츠 운영을 통합 기획한 프로젝트",
       detail: "제 1회 주락이 페스티벌은 지역 상권 활성화와 야간 문화 콘텐츠를 결합하여 기획된 참여형 축제로, 먹거리 부스, 체험 프로그램, 무대 공연, 현장 동선 설계 및 운영 인력 배치까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: ["/portfolio-17.jpg", "/portfolio-17-2.jpg", "/portfolio-17-3.jpg", "/portfolio-17-4.jpg", "/portfolio-17-5.jpg", "/portfolio-17-6.jpg", "/portfolio-17-7.jpg"],
+      gallery: ["/portfolio-17.jpg", "/portfolio-17-2.jpg", "/portfolio-17-3.jpg", "/portfolio-17-4.jpg", "/portfolio-17-5.jpg", "/portfolio-17-6.jpg"],
     },
     {
       id: "dongbu-makgeolli-festival-series",
@@ -206,20 +234,7 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-23.jpg",
       desc: "어린이들이 직접 참여하는 경제 체험형 축제로, 중고 물품 거래와 체험 프로그램을 결합한 가족 참여형 행사 프로젝트",
       detail: "제2회 장안동 짤짤이 어린이 당근마켓은 어린이들이 직접 판매자와 구매자가 되어 경제 활동을 체험할 수 있도록 기획된 참여형 축제입니다. 어린이 플리마켓, 체험 프로그램, 가족 참여 이벤트, 무대 공연, 현장 동선 관리 및 안전 운영까지 전반적인 행사 운영을 통합적으로 수행한 프로젝트입니다. 행사일은 2026년 5월 31일입니다.",
-      gallery: [
-        "/portfolio-23.jpg",
-        "/portfolio-23-2.jpg",
-        "/portfolio-23-3.jpg",
-        { type: "video", src: "/videos/portfolio-23-video.mp4" },
-        "/portfolio-23-4.jpg",
-        "/portfolio-23-5.jpg",
-        "/portfolio-23-6.jpg",
-        "/portfolio-23-7.jpg",
-        "/portfolio-23-8.jpg",
-        "/portfolio-23-9.jpg",
-        "/portfolio-23-10.jpg",
-        "/portfolio-23-11.jpg",
-      ],
+      gallery: ["/portfolio-23.jpg", "/portfolio-23-2.jpg", "/portfolio-23-3.jpg", "/portfolio-23-4.jpg", "/portfolio-23-5.jpg", "/portfolio-23-6.jpg", "/portfolio-23-7.jpg", "/portfolio-23-8.jpg", "/portfolio-23-9.jpg", "/portfolio-23-10.jpg", "/portfolio-23-11.jpg"],
     },
   ]
 
@@ -254,6 +269,28 @@ export default function FestivalAgencySiteMockup() {
       desc: "행사 운영에 필요한 다양한 장비와 소모품을 함께 대여합니다.",
       points: ["소화기", "배너 거치대", "윈드 배너 거치대"],
     },
+  ]
+
+  const navItems = [
+    { id: "about", label: "회사소개" },
+    { id: "services", label: "사업영역" },
+    { id: "portfolio", label: "포트폴리오" },
+    { id: "rental", label: "렌탈" },
+    { id: "contact", label: "문의" },
+  ]
+
+  const aboutHighlights = [
+    { title: "Festival", desc: "지역 축제 · 문화 행사" },
+    { title: "Event", desc: "기업 행사 · 프로모션" },
+    { title: "Rental", desc: "무대 · 음향 · 조명" },
+    { title: "Video", desc: "스케치 · 홍보 콘텐츠" },
+  ]
+
+  const processSteps = [
+    ["01", "기획 및 구성", "행사 목적, 예산, 타깃에 맞춘 실무형 기획안을 제안합니다."],
+    ["02", "현장 설계", "동선, 무대, 장비, 운영 인력까지 현장 중심으로 설계합니다."],
+    ["03", "운영 및 대응", "행사 당일 진행, 안전 관리, 돌발 상황 대응까지 안정적으로 운영합니다."],
+    ["04", "기록 및 확장", "스케치 영상, 사진, 홍보 콘텐츠로 행사 이후 활용도까지 높입니다."],
   ]
 
   const [selectedPortfolioId, setSelectedPortfolioId] = useState(portfolio[0]?.id)
@@ -346,11 +383,11 @@ ${form.message}`)
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
-            <a href="#about" className="hover:text-zinc-600">회사소개</a>
-            <a href="#services" className="hover:text-zinc-600">사업영역</a>
-            <a href="#portfolio" className="hover:text-zinc-600">포트폴리오</a>
-            <a href="#rental" className="hover:text-zinc-600">렌탈</a>
-            <a href="#contact" className="hover:text-zinc-600">문의</a>
+            {navItems.map((item) => (
+              <a key={item.id} href={`#${item.id}`} className="hover:text-zinc-600">
+                {item.label}
+              </a>
+            ))}
           </nav>
           <button type="button" className="rounded-xl border px-3 py-2 text-sm font-semibold md:hidden" onClick={() => setMobileMenuOpen((prev) => !prev)}>
             {mobileMenuOpen ? "닫기" : "메뉴"}
@@ -421,25 +458,17 @@ ${form.message}`)
           </div>
           <div className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
-              {["Festival|지역 축제 · 문화 행사", "Event|기업 행사 · 프로모션", "Rental|무대 · 음향 · 조명", "Video|스케치 · 홍보 콘텐츠"].map((text) => {
-                const [title, desc] = text.split("|")
-                return (
-                  <div key={title} className="rounded-3xl border bg-white p-6 shadow-sm">
-                    <p className="text-3xl font-black text-zinc-950">{title}</p>
-                    <p className="mt-2 text-sm text-zinc-500">{desc}</p>
-                  </div>
-                )
-              })}
+              {aboutHighlights.map((item) => (
+                <div key={item.title} className="rounded-3xl border bg-white p-6 shadow-sm">
+                  <p className="text-3xl font-black text-zinc-950">{item.title}</p>
+                  <p className="mt-2 text-sm text-zinc-500">{item.desc}</p>
+                </div>
+              ))}
             </div>
             <div className="rounded-3xl border bg-zinc-50 p-6 shadow-sm sm:p-8">
               <p className="text-lg font-bold">진행 프로세스</p>
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                {[
-                  ["01", "기획 및 구성", "행사 목적, 예산, 타깃에 맞춘 실무형 기획안을 제안합니다."],
-                  ["02", "현장 설계", "동선, 무대, 장비, 운영 인력까지 현장 중심으로 설계합니다."],
-                  ["03", "운영 및 대응", "행사 당일 진행, 안전 관리, 돌발 상황 대응까지 안정적으로 운영합니다."],
-                  ["04", "기록 및 확장", "스케치 영상, 사진, 홍보 콘텐츠로 행사 이후 활용도까지 높입니다."],
-                ].map(([num, title, desc]) => (
+                {processSteps.map(([num, title, desc]) => (
                   <div key={num} className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
                     <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">{num}</p>
                     <p className="mt-2 font-bold">{title}</p>
@@ -521,32 +550,13 @@ ${form.message}`)
             <button type="button" onClick={() => moveHorizontal(portfolioGalleryRef, "prev", 0.75, 260)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:left-4 sm:h-12 sm:w-12">‹</button>
             <button type="button" onClick={() => moveHorizontal(portfolioGalleryRef, "next", 0.75, 260)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-lg text-white backdrop-blur-sm transition hover:bg-black/70 sm:right-4 sm:h-12 sm:w-12">›</button>
             <div ref={portfolioGalleryRef} className="flex gap-4 overflow-x-hidden px-12 pb-2 sm:px-16">
-              {selectedPortfolio?.gallery.map((item, index) => {
-                const key = typeof item === "string" ? item : item.src
-                return (
-                  <div key={key} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
-                    <div className="h-56 bg-zinc-800 sm:h-64">
-                      {typeof item === "string" ? (
-                        <img
-                          src={item}
-                          alt={`${selectedPortfolio?.title} 사진 ${index + 1}`}
-                          className="h-full w-full cursor-pointer object-cover"
-                          onClick={() => setLightboxImage(item)}
-                        />
-                      ) : (
-                        <video
-                          controls
-                          playsInline
-                          className="h-full w-full object-cover"
-                          poster={selectedPortfolio?.image}
-                        >
-                          <source src={item.src} type="video/mp4" />
-                        </video>
-                      )}
-                    </div>
+              {selectedPortfolio?.gallery.map((image, index) => (
+                <div key={image} className="min-w-[250px] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:min-w-[320px]">
+                  <div className="h-56 bg-zinc-800 sm:h-64">
+                    <img src={image} alt={`${selectedPortfolio?.title} 사진 ${index + 1}`} className="h-full w-full cursor-pointer object-cover" onClick={() => setLightboxImage(image)} />
                   </div>
-                )
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
