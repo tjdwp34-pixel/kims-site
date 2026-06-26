@@ -634,6 +634,11 @@ ${form.message}`)
           <div className="space-y-1">
             <p>© 2026 킴스기획 KIMS entertainment.</p>
             <p>사업자번호: 830-06-03074</p>
+            <p>
+              주소: <a href="https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EB%8B%B5%EC%8B%AD%EB%A6%AC%EB%A1%9C%2067%EA%B8%B8%2037%202%EC%B8%B5%20%ED%82%B4%EC%8A%A4%EA%B8%B0%ED%9A%8D" target="_blank" rel="noopener noreferrer" className="text-zinc-900 underline decoration-zinc-300 transition hover:text-zinc-700">
+                서울특별시 동대문구 답십리로 67길 37 2층 킴스기획
+              </a>
+            </p>
           </div>
           <p>개인정보처리방침</p>
         </div>
