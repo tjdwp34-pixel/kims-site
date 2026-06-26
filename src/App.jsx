@@ -601,12 +601,23 @@ ${form.message}`)
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의 메일 작성</h2>
             <p className="mt-5 text-base leading-8 text-zinc-600">필요한 내용을 작성하시면 문의가 전송되며, 자동 전송이 설정되지 않은 경우 이메일 작성 화면으로 연결됩니다.</p>
-            <div className="mt-8 space-y-3 text-sm text-zinc-700">
-              <p><span className="font-semibold">Tel.</span> 010-7604-0025</p>
-              <p><span className="font-semibold">E-mail.</span> kimset11@naver.com</p>
-              <p><span className="font-semibold">Fax.</span> 0504-376-0025</p>
-              <p><span className="font-semibold">Kakao.</span> Kims-ent</p>
-              <p><span className="font-semibold">사업자번호.</span> 830-06-03074</p>
+            <div className="mt-8 space-y-6">
+              <div className="rounded-3xl border bg-zinc-50 p-5 text-zinc-700 shadow-sm sm:p-6">
+                <p className="text-sm font-semibold text-zinc-900">간편 문의</p>
+                <p className="mt-3 text-sm leading-7 text-zinc-600">행사 문의가 더 편하도록, 전화나 간편 이메일로 바로 연락할 수 있습니다.</p>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                  <a href="tel:01076040025" className="inline-flex flex-1 items-center justify-center rounded-2xl bg-zinc-950 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-zinc-800">전화 바로걸기</a>
+                  <a href="mailto:kimset11@naver.com?subject=%5B간편%20문의%5D&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%0D%0A%0D%0A%EB%82%98%EC%9D%98%20%EC%95%88%EB%82%B4%3A%0D%0A%EC%82%AC%ED%96%89%20%EC%9D%BC%EC%9D%BC%3A%0D%0A%EC%9D%BC%EC%9D%BC%3A%0D%0A%EC%9D%B8%EC%9A%A9%20%EC%9E%90%3A" className="inline-flex flex-1 items-center justify-center rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100">간편 이메일 문의</a>
+                </div>
+                <p className="mt-4 text-xs text-zinc-500">카카오톡 채널: <span className="font-semibold text-zinc-900">Kims-ent</span></p>
+              </div>
+              <div className="space-y-3 text-sm text-zinc-700">
+                <p><span className="font-semibold">Tel.</span> <a href="tel:01076040025" className="text-zinc-900 underline">010-7604-0025</a></p>
+                <p><span className="font-semibold">E-mail.</span> <a href="mailto:kimset11@naver.com" className="text-zinc-900 underline">kimset11@naver.com</a></p>
+                <p><span className="font-semibold">Fax.</span> 0504-376-0025</p>
+                <p><span className="font-semibold">Kakao.</span> Kims-ent</p>
+                <p><span className="font-semibold">사업자번호.</span> 830-06-03074</p>
+              </div>
             </div>
           </div>
           <form onSubmit={handleSubmit} className="rounded-3xl border bg-zinc-50 p-5 shadow-sm sm:p-6">
