@@ -336,34 +336,34 @@ ${form.message}`)
   }, [featuredPortfolio])
 
   return (
-    <div className="min-h-screen bg-white text-zinc-900">
-      <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
+    <div className="min-h-screen bg-zinc-950 text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-4">
-            <div className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-zinc-200">
-              <img src="/logo.png" alt="KIMS logo" className="h-12 w-auto shrink-0 object-contain brightness-0 contrast-200 sm:h-16" />
+            <div className="rounded-3xl bg-white/10 p-2 shadow-lg shadow-sky-500/5 ring-1 ring-white/10 backdrop-blur-sm">
+              <img src="/logo.png" alt="KIMS logo" className="h-12 w-auto shrink-0 object-contain sm:h-16" />
             </div>
             <div>
-              <p className="text-sm font-bold tracking-tight sm:text-xl">킴스기획 KIMS entertainment</p>
-              <p className="mt-1 text-[11px] leading-relaxed text-zinc-500 sm:text-xs">행사 · 축제 기획 / 운영 / 제작</p>
+              <p className="text-sm font-bold tracking-tight text-white sm:text-xl">킴스기획 KIMS entertainment</p>
+              <p className="mt-1 text-[11px] leading-relaxed text-slate-400 sm:text-xs">행사 · 축제 기획 / 운영 / 제작</p>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
             {navItems.map((item) => (
-              <a key={item.id} href={`#${item.id}`} className="hover:text-zinc-600">
+              <a key={item.id} href={`#${item.id}`} className="text-slate-300 transition hover:text-white">
                 {item.label}
               </a>
             ))}
           </nav>
-          <button type="button" className="rounded-xl border px-3 py-2 text-sm font-semibold md:hidden" onClick={() => setMobileMenuOpen((prev) => !prev)}>
+          <button type="button" className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:hidden" onClick={() => setMobileMenuOpen((prev) => !prev)}>
             {mobileMenuOpen ? "닫기" : "메뉴"}
           </button>
         </div>
         {mobileMenuOpen && (
-          <div className="border-t bg-white md:hidden">
+          <div className="border-t border-white/10 bg-zinc-950 md:hidden">
             <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 text-sm font-semibold sm:px-6">
               {["about", "services", "portfolio", "contact"].map((id) => (
-                <a key={id} href={`#${id}`} onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">
+                <a key={id} href={`#${id}`} onClick={() => setMobileMenuOpen(false)} className="rounded-2xl px-3 py-3 text-slate-200 transition hover:bg-white/5 hover:text-white">
                   {id === "about" ? "회사소개" : id === "services" ? "사업영역" : id === "portfolio" ? "포트폴리오" : "문의"}
                 </a>
               ))}
@@ -372,7 +372,7 @@ ${form.message}`)
         )}
       </header>
 
-      <section className="border-b bg-zinc-950 text-white">
+      <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.16),transparent_26%),linear-gradient(180deg,#020617_0%,#111827_100%)] text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-[0.95fr_1.05fr] md:gap-10 md:py-24">
           <div className="flex flex-col justify-center">
             <p className="mb-3 text-sm uppercase tracking-[0.25em] text-zinc-400">Event & Festival Agency</p>
@@ -381,8 +381,8 @@ ${form.message}`)
               킴스기획(KIMS entertainment)은 기획, 연출, 운영, 장비 구성, 영상 제작까지 전 과정을 통합적으로 수행하는 행사·축제 전문 대행사입니다.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">프로젝트 문의하기</a>
-              <a href="#portfolio" className="rounded-2xl border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">포트폴리오 보기</a>
+              <a href="#contact" className="rounded-3xl bg-gradient-to-r from-sky-400 via-cyan-400 to-emerald-400 px-6 py-3 text-center text-sm font-semibold text-zinc-950 shadow-2xl shadow-sky-400/20 transition hover:opacity-95">프로젝트 문의하기</a>
+              <a href="#portfolio" className="rounded-3xl border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">포트폴리오 보기</a>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
@@ -425,20 +425,20 @@ ${form.message}`)
           <div className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               {aboutHighlights.map((item) => (
-                <div key={item.title} className="rounded-3xl border bg-white p-6 shadow-sm">
-                  <p className="text-3xl font-black text-zinc-950">{item.title}</p>
-                  <p className="mt-2 text-sm text-zinc-500">{item.desc}</p>
+                <div key={item.title} className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_24px_80px_-55px_rgba(15,23,42,0.8)] backdrop-blur-sm">
+                  <p className="text-3xl font-black text-white">{item.title}</p>
+                  <p className="mt-2 text-sm text-slate-300">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <div className="rounded-3xl border bg-zinc-50 p-6 shadow-sm sm:p-8">
-              <p className="text-lg font-bold">진행 프로세스</p>
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_24px_80px_-55px_rgba(15,23,42,0.8)] sm:p-8 backdrop-blur-sm">
+              <p className="text-lg font-bold text-white">진행 프로세스</p>
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
                 {processSteps.map(([num, title, desc]) => (
-                  <div key={num} className="rounded-2xl bg-white p-4 ring-1 ring-zinc-100">
-                    <p className="text-xs font-semibold tracking-[0.2em] text-zinc-400">{num}</p>
-                    <p className="mt-2 font-bold">{title}</p>
-                    <p className="mt-2 text-sm leading-6 text-zinc-600">{desc}</p>
+                  <div key={num} className="rounded-3xl bg-zinc-950/80 p-4 ring-1 ring-white/10">
+                    <p className="text-xs font-semibold tracking-[0.2em] text-sky-300">{num}</p>
+                    <p className="mt-2 font-bold text-white">{title}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">{desc}</p>
                   </div>
                 ))}
               </div>
@@ -450,47 +450,48 @@ ${form.message}`)
       <section id="services" className="bg-zinc-950 py-16 sm:py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Services</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-300">Services</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">사업 영역</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {services.map((item) => (
-              <div key={item.title} className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-zinc-100 transition hover:-translate-y-1 hover:shadow-lg">
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-zinc-600">{item.desc}</p>
+              <div key={item.title} className="rounded-[2.5rem] border border-white/10 bg-white/5 p-7 shadow-[0_18px_60px_-35px_rgba(15,23,42,0.9)] transition hover:-translate-y-1 hover:border-sky-300/40 hover:bg-white/10">
+                <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-zinc-300">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Portfolio</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">주요 프로젝트</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600">킴스기획(KIMS entertainment)이 진행한 행사와 축제 운영 사례를 한눈에 볼 수 있도록 정리한 포트폴리오입니다.</p>
+      <section id="portfolio" className="bg-zinc-950/80 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">Portfolio</p>
+              <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">주요 프로젝트</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">킴스기획(KIMS entertainment)이 진행한 행사와 축제 운영 사례를 한눈에 볼 수 있도록 정리한 포트폴리오입니다.</p>
+            </div>
+            <a href="#contact" className="rounded-3xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">견적 문의</a>
           </div>
-          <a href="#contact" className="rounded-2xl border px-4 py-2 text-sm font-semibold hover:bg-zinc-50">견적 문의</a>
-        </div>
 
         <div className="relative mt-6">
-          <button type="button" onClick={() => moveHorizontal(portfolioListRef, "prev", 0.82, 300)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:left-4 sm:h-12 sm:w-12">‹</button>
-          <button type="button" onClick={() => moveHorizontal(portfolioListRef, "next", 0.82, 300)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg text-zinc-900 shadow-md transition hover:bg-white sm:right-4 sm:h-12 sm:w-12">›</button>
+          <button type="button" onClick={() => moveHorizontal(portfolioListRef, "prev", 0.82, 300)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-lg text-white shadow-lg backdrop-blur transition hover:bg-white/20 sm:left-4 sm:h-12 sm:w-12">‹</button>
+          <button type="button" onClick={() => moveHorizontal(portfolioListRef, "next", 0.82, 300)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-lg text-white shadow-lg backdrop-blur transition hover:bg-white/20 sm:right-4 sm:h-12 sm:w-12">›</button>
           <div ref={portfolioListRef} className="flex gap-6 overflow-x-hidden px-12 pb-3 sm:px-16">
             {sortedPortfolio.map((item) => (
-              <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:min-w-[320px] sm:max-w-[320px]">
-                <div className="relative h-64 overflow-hidden bg-zinc-200">
-                  <img src={item.image} alt={item.title} className="h-full w-full cursor-pointer object-cover" onClick={() => setLightboxImage(item.image)} />
+              <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:shadow-2xl sm:min-w-[320px] sm:max-w-[320px]">
+                <div className="relative h-64 overflow-hidden bg-zinc-800">
+                  <img src={item.image} alt={item.title} className="h-full w-full cursor-pointer object-cover transition duration-500 hover:scale-105" onClick={() => setLightboxImage(item.image)} />
                 </div>
                 <div className="p-6">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-700">{item.tag}</span>
-                    {item.year && <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-500">{item.year}</span>}
-                    <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-500">{item.location}</span>
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-sky-300">{item.tag}</span>
+                    {item.year && <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-zinc-300">{item.year}</span>}
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-zinc-300">{item.location}</span>
                   </div>
-                  <h3 className="mt-4 text-xl font-bold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.desc}</p>
+                  <h3 className="mt-4 text-xl font-bold text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-300">{item.desc}</p>
                   <button type="button" onClick={() => handlePortfolioSelect(item.id)} className="mt-5 rounded-2xl bg-zinc-950 px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90">상세보기</button>
                 </div>
               </article>
@@ -528,46 +529,47 @@ ${form.message}`)
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의 메일 작성</h2>
-            <p className="mt-5 text-base leading-8 text-zinc-600">필요한 내용을 작성하시면 문의가 전송되며, 자동 전송이 설정되지 않은 경우 이메일 작성 화면으로 연결됩니다.</p>
-            <div className="mt-8 space-y-6">
-              <div className="rounded-3xl border bg-zinc-50 p-5 text-zinc-700 shadow-sm sm:p-6">
-                <p className="text-sm font-semibold text-zinc-900">간편 문의</p>
-                <p className="mt-3 text-sm leading-7 text-zinc-600">행사 문의가 더 편하도록, 전화나 간편 이메일로 바로 연락할 수 있습니다.</p>
-                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-                  <a href="tel:01076040025" className="inline-flex flex-1 items-center justify-center rounded-2xl bg-zinc-950 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-zinc-800">전화 바로걸기</a>
-                  <a href="mailto:kimset11@naver.com?subject=%5B간편%20문의%5D&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%0D%0A%0D%0A%EB%82%98%EC%9D%98%20%EC%95%88%EB%82%B4%3A%0D%0A%EC%82%AC%ED%96%89%20%EC%9D%BC%EC%9D%BC%3A%0D%0A%EC%9D%BC%EC%9D%BC%3A%0D%0A%EC%9D%B8%EC%9A%A9%20%EC%9E%90%3A" className="inline-flex flex-1 items-center justify-center rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100">간편 이메일 문의</a>
+      <section id="contact" className="bg-zinc-950 py-16 sm:py-20 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">Contact</p>
+              <h2 className="mt-3 text-3xl font-bold md:text-4xl">프로젝트 문의</h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">필요한 내용을 작성하시면 문의가 전송되며, 자동 전송이 설정되지 않은 경우 이메일 작성 화면으로 연결됩니다.</p>
+              <div className="mt-8 space-y-6">
+                <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_24px_70px_-45px_rgba(15,23,42,0.8)] sm:p-6">
+                  <p className="text-sm font-semibold text-white">간편 문의</p>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">행사 문의가 더 편하도록, 전화나 간편 이메일로 바로 연락할 수 있습니다.</p>
+                  <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                    <a href="tel:01076040025" className="inline-flex flex-1 items-center justify-center rounded-3xl bg-gradient-to-r from-sky-400 via-cyan-400 to-emerald-400 px-4 py-3 text-center text-sm font-semibold text-zinc-950 transition hover:opacity-95">전화 바로걸기</a>
+                    <a href="mailto:kimset11@naver.com?subject=%5B간편%20문의%5D&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%0D%0A%0D%0A%EB%82%98%EC%9D%98%20%EC%95%88%EB%82%B4%3A%0D%0A%EC%82%AC%ED%96%89%20%EC%9D%BC%EC%9D%BC%3A%0D%0A%EC%9D%BC%EC%9D%BC%3A%0D%0A%EC%9D%B8%EC%9A%A9%20%EC%9E%90%3A" className="inline-flex flex-1 items-center justify-center rounded-3xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">간편 이메일 문의</a>
+                  </div>
+                  <p className="mt-4 text-xs text-slate-400">카카오톡 채널: <span className="font-semibold text-white">Kims-ent</span></p>
                 </div>
-                <p className="mt-4 text-xs text-zinc-500">카카오톡 채널: <span className="font-semibold text-zinc-900">Kims-ent</span></p>
-              </div>
-              <div className="space-y-3 text-sm text-zinc-700">
-                <p><span className="font-semibold">Tel.</span> <a href="tel:01076040025" className="text-zinc-900 underline">010-7604-0025</a></p>
-                <p><span className="font-semibold">E-mail.</span> <a href="mailto:kimset11@naver.com" className="text-zinc-900 underline">kimset11@naver.com</a></p>
-                <p><span className="font-semibold">Fax.</span> 0504-376-0025</p>
-                <p><span className="font-semibold">Kakao.</span> Kims-ent</p>
-                <p><span className="font-semibold">사업자번호.</span> 830-06-03074</p>
+              <div className="space-y-3 text-sm text-slate-300">
+                <p><span className="font-semibold text-white">Tel.</span> <a href="tel:01076040025" className="underline decoration-sky-300/60">010-7604-0025</a></p>
+                <p><span className="font-semibold text-white">E-mail.</span> <a href="mailto:kimset11@naver.com" className="underline decoration-sky-300/60">kimset11@naver.com</a></p>
+                <p><span className="font-semibold text-white">Fax.</span> 0504-376-0025</p>
+                <p><span className="font-semibold text-white">Kakao.</span> Kims-ent</p>
+                <p><span className="font-semibold text-white">사업자번호.</span> 830-06-03074</p>
               </div>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="rounded-3xl border bg-zinc-50 p-5 shadow-sm sm:p-6">
+          <form onSubmit={handleSubmit} className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_24px_70px_-45px_rgba(15,23,42,0.8)] sm:p-6">
             <div className="grid gap-4 md:grid-cols-2">
-              <input name="name" value={form.name} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="담당자명" />
-              <input name="phone" value={form.phone} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none" placeholder="연락처" />
-              <input name="email" value={form.email} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="이메일" />
-              <input name="project" value={form.project} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사명 / 프로젝트명" />
-              <select name="type" value={form.type} onChange={handleChange} className="rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2">
-                <option>문의 유형 선택</option>
-                <option>행사 기획</option>
-                <option>축제 운영</option>
-                <option>영상 제작</option>
+              <input name="name" value={form.name} onChange={handleChange} className="rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-slate-400" placeholder="담당자명" />
+              <input name="phone" value={form.phone} onChange={handleChange} className="rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-slate-400" placeholder="연락처" />
+              <input name="email" value={form.email} onChange={handleChange} className="rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-slate-400 md:col-span-2" placeholder="이메일" />
+              <input name="project" value={form.project} onChange={handleChange} className="rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-slate-400 md:col-span-2" placeholder="행사명 / 프로젝트명" />
+              <select name="type" value={form.type} onChange={handleChange} className="rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none md:col-span-2">
+                <option className="bg-zinc-950 text-white">문의 유형 선택</option>
+                <option className="bg-zinc-950 text-white">행사 기획</option>
+                <option className="bg-zinc-950 text-white">축제 운영</option>
+                <option className="bg-zinc-950 text-white">영상 제작</option>
               </select>
-              <textarea name="message" value={form.message} onChange={handleChange} className="min-h-[160px] rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사 일정, 장소, 예산, 필요한 서비스 등을 적어주세요" />
+              <textarea name="message" value={form.message} onChange={handleChange} className="min-h-[160px] rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-white outline-none placeholder:text-slate-400 md:col-span-2" placeholder="행사 일정, 장소, 예산, 필요한 서비스 등을 적어주세요" />
             </div>
-            <button type="submit" className="mt-5 w-full rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90">이메일로 문의하기</button>
+            <button type="submit" className="mt-5 w-full rounded-3xl bg-gradient-to-r from-sky-400 via-cyan-400 to-emerald-400 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:opacity-95">이메일로 문의하기</button>
           </form>
         </div>
       </section>
