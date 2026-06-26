@@ -447,10 +447,10 @@ ${form.message}`)
         </div>
       </section>
 
-      <section id="services" className="bg-zinc-50 py-16 sm:py-20">
+      <section id="services" className="bg-zinc-950 py-16 sm:py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">Services</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Services</p>
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">사업 영역</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
