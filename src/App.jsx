@@ -238,51 +238,17 @@ export default function FestivalAgencySiteMockup() {
     },
   ]
 
-  const rentals = [
-    {
-      title: "무대 렌탈",
-      desc: "소형 행사부터 대형 축제까지 규모에 최적화된 무대 시스템을 설계·설치합니다.",
-      points: ["간이 무대", "미니 트러스", "현장 설치 및 철거", "안전 구조 설계"],
-    },
-    {
-      title: "음향 장비",
-      desc: "야외 행사, 공연, 실내 이벤트 등 다양한 환경에서 안정적인 음향 시스템을 제공합니다.",
-      points: ["스피커", "오디오 컨트롤러", "믹싱 및 오퍼레이터 지원", "현장 맞춤 세팅"],
-    },
-    {
-      title: "조명 장비",
-      desc: "행사의 분위기와 연출을 극대화하는 무대 및 특수 조명 시스템을 구성합니다.",
-      points: ["페스티벌 알전구 (스트링 조명)", "무대 / 분위기 조명", "LED / 무빙라이트", "연출 디자인"],
-    },
-    {
-      title: "영상 · LED",
-      desc: "현장 송출, 홍보 영상, LED 스크린까지 영상 시스템을 통합 지원합니다.",
-      points: ["LED 스크린", "빔프로젝터", "영상 송출 시스템"],
-    },
-    {
-      title: "촬영장비 대여",
-      desc: "현장 촬영부터 콘텐츠 제작까지 전문 장비와 인력을 함께 지원합니다.",
-      points: ["오지모 360", "오지모 프로", "고프로", "현장 촬영", "영상 편집"],
-    },
-    {
-      title: "행사 물품 대여",
-      desc: "행사 운영에 필요한 다양한 장비와 소모품을 함께 대여합니다.",
-      points: ["소화기", "배너 거치대", "윈드 배너 거치대"],
-    },
-  ]
-
   const navItems = [
     { id: "about", label: "회사소개" },
     { id: "services", label: "사업영역" },
     { id: "portfolio", label: "포트폴리오" },
-    { id: "rental", label: "렌탈" },
     { id: "contact", label: "문의" },
   ]
 
   const aboutHighlights = [
     { title: "Festival", desc: "지역 축제 · 문화 행사" },
     { title: "Event", desc: "기업 행사 · 프로모션" },
-    { title: "Rental", desc: "무대 · 음향 · 조명" },
+    { title: "Equipment", desc: "무대 · 음향 · 조명" },
     { title: "Video", desc: "스케치 · 홍보 콘텐츠" },
   ]
 
@@ -379,7 +345,7 @@ ${form.message}`)
             </div>
             <div>
               <p className="text-sm font-bold tracking-tight sm:text-xl">킴스기획 KIMS entertainment</p>
-              <p className="mt-1 text-[11px] leading-relaxed text-zinc-500 sm:text-xs">행사 · 축제 기획 / 운영 / 렌탈</p>
+              <p className="mt-1 text-[11px] leading-relaxed text-zinc-500 sm:text-xs">행사 · 축제 기획 / 운영 / 제작</p>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
@@ -396,9 +362,9 @@ ${form.message}`)
         {mobileMenuOpen && (
           <div className="border-t bg-white md:hidden">
             <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 text-sm font-semibold sm:px-6">
-              {["about", "services", "portfolio", "rental", "contact"].map((id) => (
+              {["about", "services", "portfolio", "contact"].map((id) => (
                 <a key={id} href={`#${id}`} onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-3 py-3 hover:bg-zinc-50">
-                  {id === "about" ? "회사소개" : id === "services" ? "사업영역" : id === "portfolio" ? "포트폴리오" : id === "rental" ? "렌탈" : "문의"}
+                  {id === "about" ? "회사소개" : id === "services" ? "사업영역" : id === "portfolio" ? "포트폴리오" : "문의"}
                 </a>
               ))}
             </div>
@@ -412,7 +378,7 @@ ${form.message}`)
             <p className="mb-3 text-sm uppercase tracking-[0.25em] text-zinc-400">Event & Festival Agency</p>
             <h1 className="max-w-[7.5em] text-[2.6rem] font-black leading-[0.95] sm:max-w-none sm:text-5xl md:text-6xl">행사와 축제를<br />가장 현장답게 만듭니다</h1>
             <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-300 sm:text-base md:text-lg">
-              킴스기획(KIMS entertainment)은 기획, 연출, 운영, 장비 렌탈, 영상 제작까지 전 과정을 통합적으로 수행하는 행사·축제 전문 대행사입니다.
+              킴스기획(KIMS entertainment)은 기획, 연출, 운영, 장비 구성, 영상 제작까지 전 과정을 통합적으로 수행하는 행사·축제 전문 대행사입니다.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href="#contact" className="rounded-2xl bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 shadow-sm transition hover:-translate-y-0.5">프로젝트 문의하기</a>
@@ -449,11 +415,11 @@ ${form.message}`)
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">About</p>
             <h2 className="mt-3 whitespace-nowrap text-2xl font-bold leading-tight sm:text-3xl md:text-3xl">기획부터 현장 운영까지, 한 팀으로 움직입니다</h2>
-            <p className="mt-6 text-base leading-8 text-zinc-600">킴스기획(KIMS entertainment)은 단순한 행사 진행을 넘어, 현장의 목적과 분위기를 종합적으로 설계하는 전문 기획팀입니다. 클라이언트의 목표에 부합하는 기획안 수립부터 무대 연출, 운영 인력 구성, 장비 렌탈, 현장 콘텐츠 제작까지 전 과정을 통합적으로 제공합니다.</p>
+            <p className="mt-6 text-base leading-8 text-zinc-600">킴스기획(KIMS entertainment)은 단순한 행사 진행을 넘어, 현장의 목적과 분위기를 종합적으로 설계하는 전문 기획팀입니다. 클라이언트의 목표에 부합하는 기획안 수립부터 무대 연출, 운영 인력 구성, 장비 구성, 현장 콘텐츠 제작까지 전 과정을 통합적으로 제공합니다.</p>
             <div className="mt-8 rounded-[2rem] border bg-zinc-950 p-6 text-white shadow-xl sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Core Message</p>
               <p className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">현장을 정확히 이해하는 기획이<br />행사의 완성도를 결정합니다.</p>
-              <p className="mt-4 text-sm leading-7 text-zinc-300">기획, 운영, 렌탈, 콘텐츠 제작을 하나의 팀에서 유기적으로 수행하며, 일정·예산·현장 상황을 고려한 실무 중심의 솔루션을 제공합니다.</p>
+              <p className="mt-4 text-sm leading-7 text-zinc-300">기획, 운영, 장비 구성, 콘텐츠 제작을 하나의 팀에서 유기적으로 수행하며, 일정·예산·현장 상황을 고려한 실무 중심의 솔루션을 제공합니다.</p>
             </div>
           </div>
           <div className="space-y-6">
@@ -562,39 +528,6 @@ ${form.message}`)
         </div>
       </section>
 
-      <section id="rental" className="bg-zinc-950 py-16 text-white sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-12 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-400">Rental</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">장비 렌탈 서비스</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-300">무대, 음향, 조명, 영상 장비를 행사 규모와 목적에 최적화하여 구성하고, 설치부터 운영까지 원스톱으로 지원합니다.</p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {rentals.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm transition hover:bg-white/10">
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.desc}</p>
-                <ul className="mt-4 space-y-1 text-xs text-zinc-400">
-                  {item.points.map((p) => <li key={p}>• {p}</li>)}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 rounded-3xl bg-white p-6 text-zinc-900 shadow-lg sm:p-8">
-            <h3 className="text-xl font-bold">운영 지원 범위</h3>
-            <div className="mt-4 grid gap-4 text-sm sm:grid-cols-3">
-              <div>• 현장 설치 및 철거 전 과정 지원</div>
-              <div>• 행사 규모·목적 기반 장비 구성 컨설팅</div>
-              <div>• 운영 인력 및 오퍼레이터 배치</div>
-            </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a href="tel:01076040025" className="flex-1 rounded-2xl bg-zinc-950 px-5 py-3 text-center font-semibold text-white">전화 문의</a>
-              <a href="#contact" className="flex-1 rounded-2xl border border-zinc-300 px-5 py-3 text-center font-semibold">빠른 견적 요청</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
           <div>
@@ -630,7 +563,6 @@ ${form.message}`)
                 <option>문의 유형 선택</option>
                 <option>행사 기획</option>
                 <option>축제 운영</option>
-                <option>렌탈 문의</option>
                 <option>영상 제작</option>
               </select>
               <textarea name="message" value={form.message} onChange={handleChange} className="min-h-[160px] rounded-2xl border bg-white px-4 py-3 outline-none md:col-span-2" placeholder="행사 일정, 장소, 예산, 필요한 서비스 등을 적어주세요" />
