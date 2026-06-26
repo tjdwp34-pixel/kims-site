@@ -478,9 +478,9 @@ ${form.message}`)
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {services.map((item) => (
-              <div key={item.title} className="rounded-[2.5rem] border border-white/10 bg-white/5 p-7 shadow-[0_18px_60px_-35px_rgba(15,23,42,0.9)] transition hover:-translate-y-1 hover:border-sky-300/40 hover:bg-white/10">
+              <div key={item.title} className="rounded-[2.5rem] border border-slate-200/40 bg-slate-100 p-7 shadow-[0_18px_60px_-35px_rgba(15,23,42,0.12)] transition hover:-translate-y-1 hover:border-sky-300/40 hover:bg-slate-50">
                 <h3 className="text-xl font-bold text-black">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-zinc-300">{item.desc}</p>
+                <p className="mt-4 text-sm leading-7 text-slate-600">{item.desc}</p>
               </div>
             ))}
           </div>
