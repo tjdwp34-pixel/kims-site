@@ -263,6 +263,8 @@ export default function FestivalAgencySiteMockup() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [lightboxImage, setLightboxImage] = useState(null)
   const [heroIndex, setHeroIndex] = useState(0)
+  const [portfolioVisible, setPortfolioVisible] = useState(false)
+  const portfolioSectionRef = useRef(null)
   const portfolioDetailRef = useRef(null)
   const portfolioListRef = useRef(null)
   const portfolioGalleryRef = useRef(null)
@@ -325,6 +327,27 @@ ${form.message}`)
     }
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setPortfolioVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        rootMargin: "-120px 0px",
+        threshold: 0.1,
+      }
+    )
+
+    if (portfolioSectionRef.current) {
+      observer.observe(portfolioSectionRef.current)
+    }
+
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -464,7 +487,7 @@ ${form.message}`)
         </div>
       </section>
 
-      <section id="portfolio" className="bg-zinc-950/80 py-16 sm:py-20">
+      <section id="portfolio" ref={portfolioSectionRef} className={`bg-zinc-950/80 py-16 sm:py-20 transition-all duration-700 ${portfolioVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -479,8 +502,12 @@ ${form.message}`)
           <button type="button" onClick={() => moveHorizontal(portfolioListRef, "prev", 0.82, 300)} className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-lg text-white shadow-lg backdrop-blur transition hover:bg-white/20 sm:left-4 sm:h-12 sm:w-12">‹</button>
           <button type="button" onClick={() => moveHorizontal(portfolioListRef, "next", 0.82, 300)} className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-lg text-white shadow-lg backdrop-blur transition hover:bg-white/20 sm:right-4 sm:h-12 sm:w-12">›</button>
           <div ref={portfolioListRef} className="flex gap-6 overflow-x-hidden px-12 pb-3 sm:px-16">
-            {sortedPortfolio.map((item) => (
-              <article key={item.id} className="min-w-[280px] max-w-[280px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:shadow-2xl sm:min-w-[320px] sm:max-w-[320px]">
+            {sortedPortfolio.map((item, index) => (
+              <article
+                key={item.id}
+                style={{ transitionDelay: `${portfolioVisible ? index * 80 : 0}ms` }}
+                className={`min-w-[280px] max-w-[280px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-lg shadow-black/20 transition-all duration-700 ${portfolioVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} hover:-translate-y-1 hover:shadow-2xl sm:min-w-[320px] sm:max-w-[320px]`}
+              >
                 <div className="relative h-64 overflow-hidden bg-zinc-800">
                   <img src={item.image} alt={item.title} className="h-full w-full cursor-pointer object-cover transition duration-500 hover:scale-105" onClick={() => setLightboxImage(item.image)} />
                 </div>
