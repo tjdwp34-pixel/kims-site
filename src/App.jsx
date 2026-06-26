@@ -146,7 +146,7 @@ export default function FestivalAgencySiteMockup() {
       image: "/portfolio-16.jpg",
       desc: "지역 주민 참여형 건강 문화 축제로, 건강 체험 프로그램과 현장 운영을 통합 기획한 프로젝트",
       detail: "제 1회 지석영 건강축제는 지역 주민과 방문객이 함께 참여할 수 있도록 구성된 건강 테마 축제로, 체험 부스 운영, 건강 상담 프로그램, 무대 진행, 현장 동선 관리 및 안전 운영까지 전반적인 현장 운영을 통합적으로 수행한 프로젝트입니다.",
-      gallery: ["/portfolio-16.jpg", "/portfolio-16-2.jpg", "/portfolio-16-3.jpg", "/portfolio-16-4.jpg", "/portfolio-16-5.jpg"],
+      gallery: ["/portfolio-16.jpg", "/portfolio-16-2.jpg", "/portfolio-16-3.jpg", "/portfolio-16-4.jpg", "/portfolio-16-5.jpg", "/portfolio-16-6.jpg", "/portfolio-16-7.jpg", "/portfolio-16-8.jpg", "/portfolio-16-9.jpg"],
     },
     {
       id: "jurak-festival-1",
